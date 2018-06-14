@@ -14,11 +14,21 @@
 		7D3B657720C4817A00189C2D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B657620C4817A00189C2D /* LoginView.swift */; };
 		7D3B657920C481A300189C2D /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B657820C481A300189C2D /* SignUpController.swift */; };
 		7D3B657B20C481B500189C2D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B657A20C481B500189C2D /* SignUpView.swift */; };
-		7D3B657D20C481EC00189C2D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B657C20C481EC00189C2D /* Extensions.swift */; };
 		7D3B657F20C4820A00189C2D /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B657E20C4820A00189C2D /* UITextField+Extension.swift */; };
 		7D3B658120C4821900189C2D /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B658020C4821900189C2D /* UIColor+Extension.swift */; };
 		7D3B658320C4822B00189C2D /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B658220C4822B00189C2D /* UIButton+Extension.swift */; };
 		7D3B658520C4823E00189C2D /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B658420C4823E00189C2D /* UIStackView+Extension.swift */; };
+		7D467B1E20D325DA0011EAA5 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D467B1D20D325DA0011EAA5 /* UIViewController+Extension.swift */; };
+		7D6C157120D300FF008F919F /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C156E20D300FF008F919F /* TabBarController.swift */; };
+		7D6C157220D300FF008F919F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C156F20D300FF008F919F /* ListViewController.swift */; };
+		7D6C157320D300FF008F919F /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157020D300FF008F919F /* FavoritesViewController.swift */; };
+		7D6C157620D30568008F919F /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157520D30568008F919F /* UITabBarController+Extension.swift */; };
+		7D6C157820D30F7B008F919F /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157720D30F7B008F919F /* AddViewController.swift */; };
+		7D6C157A20D30F9A008F919F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157920D30F9A008F919F /* AccountViewController.swift */; };
+		7D6C157C20D30FBA008F919F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157B20D30FBA008F919F /* MapViewController.swift */; };
+		7D6C158320D31242008F919F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C158220D31242008F919F /* Constants.swift */; };
+		7D6C158820D31D62008F919F /* foody_background.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7D6C158720D31D62008F919F /* foody_background.mov */; };
+		7D6C158A20D31DFC008F919F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C158920D31DFC008F919F /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,11 +41,21 @@
 		7D3B657620C4817A00189C2D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		7D3B657820C481A300189C2D /* SignUpController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		7D3B657A20C481B500189C2D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		7D3B657C20C481EC00189C2D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7D3B657E20C4820A00189C2D /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		7D3B658020C4821900189C2D /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		7D3B658220C4822B00189C2D /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		7D3B658420C4823E00189C2D /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		7D467B1D20D325DA0011EAA5 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		7D6C156E20D300FF008F919F /* TabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		7D6C156F20D300FF008F919F /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		7D6C157020D300FF008F919F /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
+		7D6C157520D30568008F919F /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
+		7D6C157720D30F7B008F919F /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		7D6C157920D30F9A008F919F /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		7D6C157B20D30FBA008F919F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		7D6C158220D31242008F919F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7D6C158720D31D62008F919F /* foody_background.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = foody_background.mov; sourceTree = "<group>"; };
+		7D6C158920D31DFC008F919F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,14 +88,18 @@
 		7D3B655D20C4805100189C2D /* FireBaseSample */ = {
 			isa = PBXGroup;
 			children = (
+				7D3B656520C4805100189C2D /* Assets.xcassets */,
+				7D6C158420D31C8B008F919F /* Resources */,
+				7D6C156E20D300FF008F919F /* TabBarController.swift */,
 				7D3B657020C480BB00189C2D /* Login */,
 				7D3B657120C480C400189C2D /* SignUp */,
+				7D6C157420D30116008F919F /* Tabs */,
 				7D3B657220C480DE00189C2D /* Extensions */,
 				7D3B657320C4811200189C2D /* Supporting files */,
 				7D3B655E20C4805100189C2D /* AppDelegate.swift */,
-				7D3B656520C4805100189C2D /* Assets.xcassets */,
 				7D3B656720C4805100189C2D /* LaunchScreen.storyboard */,
 				7D3B656A20C4805100189C2D /* Info.plist */,
+				7D6C158220D31242008F919F /* Constants.swift */,
 			);
 			path = FireBaseSample;
 			sourceTree = "<group>";
@@ -101,11 +125,13 @@
 		7D3B657220C480DE00189C2D /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				7D3B657C20C481EC00189C2D /* Extensions.swift */,
 				7D3B657E20C4820A00189C2D /* UITextField+Extension.swift */,
 				7D3B658020C4821900189C2D /* UIColor+Extension.swift */,
 				7D3B658220C4822B00189C2D /* UIButton+Extension.swift */,
 				7D3B658420C4823E00189C2D /* UIStackView+Extension.swift */,
+				7D6C157520D30568008F919F /* UITabBarController+Extension.swift */,
+				7D6C158920D31DFC008F919F /* UIView+Extension.swift */,
+				7D467B1D20D325DA0011EAA5 /* UIViewController+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -115,6 +141,82 @@
 			children = (
 			);
 			path = "Supporting files";
+			sourceTree = "<group>";
+		};
+		7D6C157420D30116008F919F /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C157D20D30FEB008F919F /* ListTab */,
+				7D6C157E20D30FF8008F919F /* AddTab */,
+				7D6C157F20D3100E008F919F /* MapTab */,
+				7D6C158020D31019008F919F /* FavoritesTab */,
+				7D6C158120D31029008F919F /* AccountTab */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
+		7D6C157D20D30FEB008F919F /* ListTab */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C156F20D300FF008F919F /* ListViewController.swift */,
+			);
+			path = ListTab;
+			sourceTree = "<group>";
+		};
+		7D6C157E20D30FF8008F919F /* AddTab */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C157720D30F7B008F919F /* AddViewController.swift */,
+			);
+			path = AddTab;
+			sourceTree = "<group>";
+		};
+		7D6C157F20D3100E008F919F /* MapTab */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C157B20D30FBA008F919F /* MapViewController.swift */,
+			);
+			path = MapTab;
+			sourceTree = "<group>";
+		};
+		7D6C158020D31019008F919F /* FavoritesTab */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C157020D300FF008F919F /* FavoritesViewController.swift */,
+			);
+			path = FavoritesTab;
+			sourceTree = "<group>";
+		};
+		7D6C158120D31029008F919F /* AccountTab */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C157920D30F9A008F919F /* AccountViewController.swift */,
+			);
+			path = AccountTab;
+			sourceTree = "<group>";
+		};
+		7D6C158420D31C8B008F919F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C158520D31C9F008F919F /* Images */,
+				7D6C158620D31CA9008F919F /* Videos */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		7D6C158520D31C9F008F919F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		7D6C158620D31CA9008F919F /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C158720D31D62008F919F /* foody_background.mov */,
+			);
+			path = Videos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D6C158820D31D62008F919F /* foody_background.mov in Resources */,
 				7D3B656920C4805100189C2D /* LaunchScreen.storyboard in Resources */,
 				7D3B656620C4805100189C2D /* Assets.xcassets in Resources */,
 			);
@@ -189,14 +292,23 @@
 			files = (
 				7D3B657920C481A300189C2D /* SignUpController.swift in Sources */,
 				7D3B657520C4816B00189C2D /* LoginController.swift in Sources */,
+				7D6C157A20D30F9A008F919F /* AccountViewController.swift in Sources */,
+				7D6C157220D300FF008F919F /* ListViewController.swift in Sources */,
+				7D6C157620D30568008F919F /* UITabBarController+Extension.swift in Sources */,
+				7D6C157120D300FF008F919F /* TabBarController.swift in Sources */,
+				7D6C157820D30F7B008F919F /* AddViewController.swift in Sources */,
 				7D3B658320C4822B00189C2D /* UIButton+Extension.swift in Sources */,
+				7D467B1E20D325DA0011EAA5 /* UIViewController+Extension.swift in Sources */,
 				7D3B658120C4821900189C2D /* UIColor+Extension.swift in Sources */,
 				7D3B657720C4817A00189C2D /* LoginView.swift in Sources */,
 				7D3B657B20C481B500189C2D /* SignUpView.swift in Sources */,
 				7D3B657F20C4820A00189C2D /* UITextField+Extension.swift in Sources */,
+				7D6C158A20D31DFC008F919F /* UIView+Extension.swift in Sources */,
+				7D6C157320D300FF008F919F /* FavoritesViewController.swift in Sources */,
 				7D3B655F20C4805100189C2D /* AppDelegate.swift in Sources */,
-				7D3B657D20C481EC00189C2D /* Extensions.swift in Sources */,
 				7D3B658520C4823E00189C2D /* UIStackView+Extension.swift in Sources */,
+				7D6C157C20D30FBA008F919F /* MapViewController.swift in Sources */,
+				7D6C158320D31242008F919F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

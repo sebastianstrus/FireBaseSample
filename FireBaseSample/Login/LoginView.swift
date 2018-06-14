@@ -22,20 +22,20 @@ class LoginView: UIView {
     
     func setup() {
         let stackView = createStackView(views: [emailTextField, passwordTextField, loginButton, signupButton])
-        addSubview(backgroundImageView)
+        //addSubview(backgroundImageView)
         addSubview(stackView)
-        backgroundImageView.setAnchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        //backgroundImageView.setAnchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
         stackView.setAnchor(width: self.frame.width - 60, height: 210)
         stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }
     
-    var backgroundImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.image = UIImage(named: "background")
-        iv.contentMode = .scaleAspectFill
-        return iv
-    }()
+//    var backgroundImageView: UIImageView = {
+//        let iv = UIImageView()
+//        iv.image = UIImage(named: "background")
+//        iv.contentMode = .scaleAspectFill
+//        return iv
+//    }()
     
     let emailTextField: UITextField = {
         let tf = UITextField(placeHolder: "Email")

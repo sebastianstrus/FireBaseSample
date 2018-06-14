@@ -24,6 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let navController = UINavigationController(rootViewController: vc)
         
         window?.rootViewController = navController
+        //let tabBarVC = TabBarController()
+        //window?.rootViewController = tabBarVC
         
         return true
     }

@@ -17,6 +17,7 @@ class LoginController: UIViewController {
         super.viewDidLoad()
         
         view.backgroundColor = UIColor.white
+        playVideo(title: "foody_background")
         
         setupView()
     }
