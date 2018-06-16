@@ -29,6 +29,8 @@
 		7D6C158320D31242008F919F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C158220D31242008F919F /* Constants.swift */; };
 		7D6C158820D31D62008F919F /* foody_background.mov in Resources */ = {isa = PBXBuildFile; fileRef = 7D6C158720D31D62008F919F /* foody_background.mov */; };
 		7D6C158A20D31DFC008F919F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C158920D31DFC008F919F /* UIView+Extension.swift */; };
+		7D7B4C4620D5CFEE00652C4A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B4C4520D5CFEE00652C4A /* String+Extension.swift */; };
+		7D7B4C4920D5D1FF00652C4A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B4C4820D5D1FF00652C4A /* Strings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +58,8 @@
 		7D6C158220D31242008F919F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7D6C158720D31D62008F919F /* foody_background.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = foody_background.mov; sourceTree = "<group>"; };
 		7D6C158920D31DFC008F919F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		7D7B4C4520D5CFEE00652C4A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		7D7B4C4820D5D1FF00652C4A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,12 +92,13 @@
 		7D3B655D20C4805100189C2D /* FireBaseSample */ = {
 			isa = PBXGroup;
 			children = (
+				7D7B4C4C20D5D40B00652C4A /* Authentication */,
+				7D6C157420D30116008F919F /* Tabs */,
+				7D7B4C4B20D5D3F600652C4A /* CoreData */,
+				7D7B4C4A20D5D3B800652C4A /* Helpers */,
 				7D3B656520C4805100189C2D /* Assets.xcassets */,
 				7D6C158420D31C8B008F919F /* Resources */,
 				7D6C156E20D300FF008F919F /* TabBarController.swift */,
-				7D3B657020C480BB00189C2D /* Login */,
-				7D3B657120C480C400189C2D /* SignUp */,
-				7D6C157420D30116008F919F /* Tabs */,
 				7D3B657220C480DE00189C2D /* Extensions */,
 				7D3B657320C4811200189C2D /* Supporting files */,
 				7D3B655E20C4805100189C2D /* AppDelegate.swift */,
@@ -132,6 +137,7 @@
 				7D6C157520D30568008F919F /* UITabBarController+Extension.swift */,
 				7D6C158920D31DFC008F919F /* UIView+Extension.swift */,
 				7D467B1D20D325DA0011EAA5 /* UIViewController+Extension.swift */,
+				7D7B4C4520D5CFEE00652C4A /* String+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -198,6 +204,7 @@
 		7D6C158420D31C8B008F919F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7D7B4C4720D5D1C700652C4A /* Strings */,
 				7D6C158520D31C9F008F919F /* Images */,
 				7D6C158620D31CA9008F919F /* Videos */,
 			);
@@ -217,6 +224,37 @@
 				7D6C158720D31D62008F919F /* foody_background.mov */,
 			);
 			path = Videos;
+			sourceTree = "<group>";
+		};
+		7D7B4C4720D5D1C700652C4A /* Strings */ = {
+			isa = PBXGroup;
+			children = (
+				7D7B4C4820D5D1FF00652C4A /* Strings.swift */,
+			);
+			path = Strings;
+			sourceTree = "<group>";
+		};
+		7D7B4C4A20D5D3B800652C4A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		7D7B4C4B20D5D3F600652C4A /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		7D7B4C4C20D5D40B00652C4A /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				7D3B657020C480BB00189C2D /* Login */,
+				7D3B657120C480C400189C2D /* SignUp */,
+			);
+			path = Authentication;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,10 +336,12 @@
 				7D6C157120D300FF008F919F /* TabBarController.swift in Sources */,
 				7D6C157820D30F7B008F919F /* AddViewController.swift in Sources */,
 				7D3B658320C4822B00189C2D /* UIButton+Extension.swift in Sources */,
+				7D7B4C4620D5CFEE00652C4A /* String+Extension.swift in Sources */,
 				7D467B1E20D325DA0011EAA5 /* UIViewController+Extension.swift in Sources */,
 				7D3B658120C4821900189C2D /* UIColor+Extension.swift in Sources */,
 				7D3B657720C4817A00189C2D /* LoginView.swift in Sources */,
 				7D3B657B20C481B500189C2D /* SignUpView.swift in Sources */,
+				7D7B4C4920D5D1FF00652C4A /* Strings.swift in Sources */,
 				7D3B657F20C4820A00189C2D /* UITextField+Extension.swift in Sources */,
 				7D6C158A20D31DFC008F919F /* UIView+Extension.swift in Sources */,
 				7D6C157320D300FF008F919F /* FavoritesViewController.swift in Sources */,
