@@ -21,4 +21,8 @@ extension UIColor {
     static var redBorderColor: UIColor = {
         return UIColor(r: 255, g: 151, b: 164)
     }()
+    
+    static var dodgerblueColor: UIColor = {
+        return UIColor(r: 30, g: 144, b: 255)
+    }()
 }

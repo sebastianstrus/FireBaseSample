@@ -13,7 +13,7 @@ extension UIView {
         let stackView = UIStackView(arrangedSubviews: views)
         stackView.axis = .vertical
         stackView.distribution = .fillProportionally
-        stackView.spacing = 10
+        stackView.spacing = Device.IS_IPHONE ? 10 : 20
         return stackView
     }
 }

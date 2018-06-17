@@ -10,14 +10,10 @@ import UIKit
 
 class LoginController: UIViewController {
     
-    
     var loginView: LoginView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        view.backgroundColor = UIColor.white
-        playVideo(title: "foody_background")
         
         setupView()
     }
@@ -31,22 +27,20 @@ class LoginController: UIViewController {
         let mainView = LoginView(frame: self.view.frame)
         self.loginView = mainView
         self.loginView.loginAction = loginPressed
-        self.loginView.signupAction = signupPressed
-        
+        self.loginView.cancelAction = cancelPressed
         self.view.addSubview(loginView)
-        
         loginView.setAnchor(top: view.topAnchor, left: view.leftAnchor, bottom: view.bottomAnchor, right: view.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
         
     }
     
     func loginPressed() {
         print("login pressed")
-        
+        let tabBarVC = TabBarController()
+        present(tabBarVC, animated: true, completion: nil)
     }
     
-    func signupPressed() {
-        let signUpController = SignUpController()
-        present(signUpController, animated: true, completion: nil)
+    func cancelPressed() {
+        dismiss(animated: true, completion: nil)
     }
     
     

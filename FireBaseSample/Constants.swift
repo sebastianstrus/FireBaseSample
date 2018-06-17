@@ -8,6 +8,25 @@
 
 import UIKit
 
+let RESIZE = UIScreen.main.bounds.size.height / 667
+
+struct Device {
+    static let IS_IPAD             = UIDevice.current.userInterfaceIdiom == .pad
+    static let IS_IPHONE           = UIDevice.current.userInterfaceIdiom == .phone
+    static let IS_RETINA           = UIScreen.main.scale >= 2.0
+    
+    static let SCREEN_WIDTH        = Int(UIScreen.main.bounds.size.width)
+    static let SCREEN_HEIGHT       = Int(UIScreen.main.bounds.size.height)
+    static let SCREEN_MAX_LENGTH   = Int( max(SCREEN_WIDTH, SCREEN_HEIGHT) )
+    static let SCREEN_MIN_LENGTH   = Int( min(SCREEN_WIDTH, SCREEN_HEIGHT) )
+    
+    static let IS_IPHONE_4_OR_LESS = IS_IPHONE && SCREEN_MAX_LENGTH  < 568
+    static let IS_IPHONE_5         = IS_IPHONE && SCREEN_MAX_LENGTH == 568
+    static let IS_IPHONE_6         = IS_IPHONE && SCREEN_MAX_LENGTH == 667
+    static let IS_IPHONE_6P        = IS_IPHONE && SCREEN_MAX_LENGTH == 736
+    static let IS_IPHONE_X         = IS_IPHONE && SCREEN_MAX_LENGTH == 812
+}
+
 // Constants for keys
 struct AppKeys {
 }
@@ -25,6 +44,7 @@ struct AppURLs {
 struct AppFonts {
     static let TITLE_FONT = UIFont.boldSystemFont(ofSize: 60.0)
     static let SUBTITLE_FONT = UIFont.boldSystemFont(ofSize: 25.0)
+    static let BTN_FONT = UIFont(name: "SeymourOne", size: Device.IS_IPHONE ? 26 : 52)
 }
 
 // Constants for colors
@@ -34,4 +54,5 @@ struct AppColors {
     static let PAYMENT_BUTTON_COLOR = UIColor(r: 74, g: 80, b: 84)
     static let VIEW_BGD_COLOR = UIColor(r: 244, g: 244, b: 244)
 }
+
 
