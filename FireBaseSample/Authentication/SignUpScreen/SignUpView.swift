@@ -38,13 +38,13 @@ class SignUpView: UIView {
     }()
     
     let submitButton: UIButton = {
-        let button = UIButton(title: "Submit", borderColor: .greenBorderColor)
+        let button = UIButton(title: "Submit", borderColor: AppColors.GREEN_BORDER)
         button.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
         return button
     }()
     
     let cancelButton: UIButton = {
-        let button = UIButton(title: "Cancel", borderColor: .redBorderColor)
+        let button = UIButton(title: "Cancel", borderColor: AppColors.RED_BORDER)
         button.addTarget(self, action: #selector(handleCancel), for: .touchUpInside)
         return button
     }()
@@ -63,7 +63,8 @@ class SignUpView: UIView {
         self.addSubview(backgroundImageView)
         addSubview(stackView)
         backgroundImageView.setAnchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
-        stackView.setAnchor(width: self.frame.width - (Device.IS_IPHONE ? 60 : 300), height: Device.IS_IPHONE ? 310 : 620)
+        //set layout for stackview
+        stackView.setAnchor(top: nil, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0    , width: self.frame.width - (Device.IS_IPHONE ? 60 : 300), height: Device.IS_IPHONE ? 310 : 620)
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
     }

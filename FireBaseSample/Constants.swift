@@ -53,6 +53,10 @@ struct AppColors {
     static let KASKO_BAR_BUTTON_COLOR = UIColor(r: 204, g: 204, b: 204)
     static let PAYMENT_BUTTON_COLOR = UIColor(r: 74, g: 80, b: 84)
     static let VIEW_BGD_COLOR = UIColor(r: 244, g: 244, b: 244)
+    static let GREEN_BORDER: UIColor = UIColor(r: 80, g: 227, b: 194)
+    static let RED_BORDER: UIColor = UIColor(r: 255, g: 151, b: 164)
+    static let DODGER_BLUE: UIColor = UIColor(r: 30, g: 144, b: 255)
+    static var SILVER_GREY: UIColor = UIColor(r: 225, g: 225, b: 225)
 }
 
 

@@ -27,7 +27,7 @@ class WelcomeView: UIView {
         
         let titlesStackView = createStackView(views: [firstLabel, secondLabel])
         addSubview(titlesStackView)
-        titlesStackView.setAnchor(width: self.frame.width, height: Device.IS_IPHONE ? 160 : 320)
+        titlesStackView.setAnchor(top: nil, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0    , width: self.frame.width, height: Device.IS_IPHONE ? 160 : 320)
         titlesStackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
         let kPaddingTop: CGFloat = Device.IS_IPHONE ? 120 : 240
         titlesStackView.setAnchor(top: topAnchor, left: nil, bottom: nil, right: nil, paddingTop: kPaddingTop, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
@@ -35,15 +35,15 @@ class WelcomeView: UIView {
         
         let stackView = createStackView(views: [loginButton, signupButton])
         addSubview(stackView)
-        stackView.setAnchor(width: self.frame.width - (Device.IS_IPHONE ? 60 : 300), height: Device.IS_IPHONE ? 130 : 250)
+        stackView.setAnchor(top: nil, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: self.frame.width - (Device.IS_IPHONE ? 60 : 300), height: Device.IS_IPHONE ? 130 : 250)
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        stackView.setAnchor(top: nil, left: nil, bottom: bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: -50, paddingRight: 0)
+        stackView.setAnchor(top: nil, left: nil, bottom: bottomAnchor, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 50, paddingRight: 0)
         
     }
     
     let firstLabel: UILabel = {
         let label = UILabel()
-        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: Strings.app_title, attributes: [NSAttributedStringKey.font: UIFont(name: "LuckiestGuy-Regular", size: Device.IS_IPHONE ? 90 : 180)!, .foregroundColor: UIColor.white]))
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: Strings.app_title, attributes: [NSAttributedString.Key.font: UIFont(name: "LuckiestGuy-Regular", size: Device.IS_IPHONE ? 90 : 180)!, .foregroundColor: UIColor.white]))
         label.attributedText = attributedString
         label.textAlignment = NSTextAlignment.center
         label.shadowColor = .black
@@ -53,7 +53,7 @@ class WelcomeView: UIView {
     
     let secondLabel: UILabel = {
         let label = UILabel()
-        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: Strings.app_subtitle, attributes: [NSAttributedStringKey.font: UIFont(name: "Oswald-Medium", size: Device.IS_IPHONE ? 40 : 80)!, .foregroundColor: UIColor.white]))
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: Strings.app_subtitle, attributes: [NSAttributedString.Key.font: UIFont(name: "Oswald-Medium", size: Device.IS_IPHONE ? 40 : 80)!, .foregroundColor: UIColor.white]))
         label.attributedText = attributedString
         label.textAlignment = NSTextAlignment.center
         label.shadowColor = .black
@@ -64,7 +64,7 @@ class WelcomeView: UIView {
 
     
     let loginButton: UIButton = {
-        let button = UIButton(title: "Login", color: .dodgerblueColor, filled: true)
+        let button = UIButton(title: "Login", color: AppColors.DODGER_BLUE, filled: true)
         button.addTarget(self, action: #selector(handleGoToLogin), for: .touchUpInside)
         return button
     }()

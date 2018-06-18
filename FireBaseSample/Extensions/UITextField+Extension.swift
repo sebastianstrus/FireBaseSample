@@ -20,7 +20,7 @@ extension UITextField {
         self.autocorrectionType = .no
         // placeholder
         var placeholder = NSMutableAttributedString()
-        placeholder = NSMutableAttributedString(attributedString: NSAttributedString(string: placeHolder, attributes: [NSAttributedStringKey.font: UIFont.systemFont(ofSize: Device.IS_IPHONE ? 18 : 36), .foregroundColor: UIColor(white: 1, alpha: 0.7)]))
+        placeholder = NSMutableAttributedString(attributedString: NSAttributedString(string: placeHolder, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: Device.IS_IPHONE ? 18 : 36), .foregroundColor: UIColor(white: 1, alpha: 0.7)]))
         self.attributedPlaceholder = placeholder
         // anchor
         self.setAnchor(width: 0, height: Device.IS_IPHONE ? 40 : 80)

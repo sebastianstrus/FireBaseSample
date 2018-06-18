@@ -15,14 +15,14 @@ extension UIViewController {
         let playerController = AVPlayerViewController()
         playerController.player = player
         playerController.showsPlaybackControls = false
-        self.addChildViewController(playerController)
+        self.addChild(playerController)
         playerController.view.frame = UIScreen.main.bounds
         playerController.videoGravity = AVLayerVideoGravity.resizeAspectFill.rawValue
         self.view.addSubview(playerController.view)
         player.play()
         // repead video
         NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime, object: player.currentItem, queue: .main) { _ in
-            player.seek(to: kCMTimeZero)
+            player.seek(to: CMTime.zero)
             player.play()
         }
     }

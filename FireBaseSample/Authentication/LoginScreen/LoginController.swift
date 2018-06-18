@@ -24,8 +24,7 @@ class LoginController: UIViewController {
     }
     
     func setupView() {
-        let mainView = LoginView(frame: self.view.frame)
-        self.loginView = mainView
+        self.loginView = LoginView(frame: self.view.frame)
         self.loginView.loginAction = loginPressed
         self.loginView.cancelAction = cancelPressed
         self.view.addSubview(loginView)

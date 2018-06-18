@@ -9,5 +9,6 @@ target 'FireBaseSample' do
 pod 'Firebase/Core'
 pod 'Firebase/Auth'
 pod 'Firebase/Database'
+pod 'Cosmos', '~> 16.0'
 
 end
