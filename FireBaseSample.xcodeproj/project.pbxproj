@@ -34,6 +34,7 @@
 		7D6C158A20D31DFC008F919F /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C158920D31DFC008F919F /* UIView+Extension.swift */; };
 		7D7B4C4620D5CFEE00652C4A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B4C4520D5CFEE00652C4A /* String+Extension.swift */; };
 		7D7B4C4920D5D1FF00652C4A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B4C4820D5D1FF00652C4A /* Strings.swift */; };
+		7DBD84CD20D7C3D00067B98A /* CellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD84CC20D7C3D00067B98A /* CellInfo.swift */; };
 		7DD8C9A220D67A7E008D273D /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8C9A120D67A7E008D273D /* WelcomeController.swift */; };
 		7DD8C9A420D67C05008D273D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8C9A320D67C05008D273D /* WelcomeView.swift */; };
 /* End PBXBuildFile section */
@@ -66,6 +67,7 @@
 		7D6C158920D31DFC008F919F /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		7D7B4C4520D5CFEE00652C4A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7D7B4C4820D5D1FF00652C4A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		7DBD84CC20D7C3D00067B98A /* CellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellInfo.swift; sourceTree = "<group>"; };
 		7DD8C9A120D67A7E008D273D /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		7DD8C9A320D67C05008D273D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7DD8C9AA20D6E249008D273D /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
@@ -103,17 +105,17 @@
 			isa = PBXGroup;
 			children = (
 				7D7B4C4C20D5D40B00652C4A /* Authentication */,
-				7D6C157420D30116008F919F /* Tabs */,
+				7D6C157420D30116008F919F /* TabBar */,
 				7D7B4C4B20D5D3F600652C4A /* CoreData */,
 				7D7B4C4A20D5D3B800652C4A /* Helpers */,
 				7D6C158420D31C8B008F919F /* Resources */,
-				7D6C156E20D300FF008F919F /* TabBarController.swift */,
 				7D3B657220C480DE00189C2D /* Extensions */,
 				7D3B657320C4811200189C2D /* Supporting files */,
 				7D3B655E20C4805100189C2D /* AppDelegate.swift */,
 				7D3B656720C4805100189C2D /* LaunchScreen.storyboard */,
 				7D3B656A20C4805100189C2D /* Info.plist */,
 				7D6C158220D31242008F919F /* Constants.swift */,
+				7DBD84CC20D7C3D00067B98A /* CellInfo.swift */,
 			);
 			path = FireBaseSample;
 			sourceTree = "<group>";
@@ -168,16 +170,13 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		7D6C157420D30116008F919F /* Tabs */ = {
+		7D6C157420D30116008F919F /* TabBar */ = {
 			isa = PBXGroup;
 			children = (
-				7D6C157D20D30FEB008F919F /* ListTab */,
-				7D6C157E20D30FF8008F919F /* AddTab */,
-				7D6C157F20D3100E008F919F /* MapTab */,
-				7D6C158020D31019008F919F /* FavoritesTab */,
-				7D6C158120D31029008F919F /* AccountTab */,
+				7D6C156E20D300FF008F919F /* TabBarController.swift */,
+				7DEDFA9D20D7AAE500A3C418 /* Tabs */,
 			);
-			path = Tabs;
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 		7D6C157D20D30FEB008F919F /* ListTab */ = {
@@ -288,6 +287,18 @@
 			path = WelcomeScreen;
 			sourceTree = "<group>";
 		};
+		7DEDFA9D20D7AAE500A3C418 /* Tabs */ = {
+			isa = PBXGroup;
+			children = (
+				7D6C157D20D30FEB008F919F /* ListTab */,
+				7D6C157E20D30FF8008F919F /* AddTab */,
+				7D6C157F20D3100E008F919F /* MapTab */,
+				7D6C158020D31019008F919F /* FavoritesTab */,
+				7D6C158120D31029008F919F /* AccountTab */,
+			);
+			path = Tabs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -383,6 +394,7 @@
 				7DD8C9A220D67A7E008D273D /* WelcomeController.swift in Sources */,
 				7D3B655F20C4805100189C2D /* AppDelegate.swift in Sources */,
 				7D3B658520C4823E00189C2D /* UIStackView+Extension.swift in Sources */,
+				7DBD84CD20D7C3D00067B98A /* CellInfo.swift in Sources */,
 				7D6C157C20D30FBA008F919F /* MapViewController.swift in Sources */,
 				7D6C158320D31242008F919F /* Constants.swift in Sources */,
 			);
