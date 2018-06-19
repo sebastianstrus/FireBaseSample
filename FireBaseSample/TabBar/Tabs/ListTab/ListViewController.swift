@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {//Change to UITableViewController
+class ListViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {//consider change to UITableViewController
     
     
     let tableView: UITableView = {
@@ -32,17 +32,11 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationBar()
+        setupNavigationBar(title: "List")
         setupTableView()
         
     }
     
-    func setupNavigationBar() {
-        view.backgroundColor = .red
-        //navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "List"
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
-    }
     
     func setupTableView() {
         tableView.delegate = self

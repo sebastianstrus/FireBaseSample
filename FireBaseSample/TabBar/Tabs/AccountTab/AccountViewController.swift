@@ -13,9 +13,8 @@ class AccountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = .gray
-        //navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Account"
+        setupNavigationBar(title: "Account")
         
     }
+
 }

@@ -13,9 +13,8 @@ class FavoritesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .purple
-        //navigationController?.navigationBar.prefersLargeTitles = true
-        navigationItem.title = "Favorites"
+        setupNavigationBar(title: "Favorites")
         
     }
+    
 }

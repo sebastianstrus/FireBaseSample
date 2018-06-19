@@ -20,8 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //create main window without storyboard
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
-        let vc = WelcomeController()
-        let navController = UINavigationController(rootViewController: vc)
+        
+        //let vc = AddMealViewController()
+        //let vc = WelcomeController()
+        //let navController = UINavigationController(rootViewController: vc)
         
         //window?.rootViewController = navController
         let tabBarVC = TabBarController()

@@ -18,12 +18,12 @@ class TabBarController: UITabBarController {
     
     func setupTabBar() {
         tabBar.barTintColor = AppColors.SILVER_GREY
-        
+        Swift.print("Height: \(tabBar.frame.height)")
 
         let listController = createNavController(vc: ListViewController(), unselected: "list_gray", selected: "list_gray")
         listController.tabBarItem.title = "List".localized
-        let addController = createNavController(vc: AddViewController(), unselected: "add_gray", selected: "add_gray")
-        addController.tabBarItem.title = "Add".localized
+        let addMealController = createNavController(vc: AddMealViewController(), unselected: "add_gray", selected: "add_gray")
+        addMealController.tabBarItem.title = "Add".localized
         let mapController = createNavController(vc: MapViewController(), unselected: "map_gray", selected: "map_gray")
         mapController.tabBarItem.title = "Map".localized
         let favoritesController = createNavController(vc: FavoritesViewController(), unselected: "favorites_gray", selected: "favorites_gray")
@@ -32,7 +32,7 @@ class TabBarController: UITabBarController {
         accountController.tabBarItem.title = "Account".localized
 
         //list, add, map, favorite, account
-        viewControllers = [listController, addController, mapController, favoritesController, accountController]
+        viewControllers = [listController, addMealController, mapController, favoritesController, accountController]
         
         //set top margin
         guard let items = tabBar.items else { return }

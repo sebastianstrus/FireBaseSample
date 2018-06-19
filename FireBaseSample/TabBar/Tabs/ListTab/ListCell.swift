@@ -10,6 +10,7 @@ import UIKit
 import Cosmos
 
 class ListCell: UITableViewCell {
+    
     let cellView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
