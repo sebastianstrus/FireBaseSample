@@ -60,7 +60,7 @@ class SignUpView: UIView {
     
     func setupViews() {
         let stackView = createStackView(views: [nameTextField, emailTextField, passwordTextField, confirmPasswordTextField, submitButton, cancelButton])
-        self.addSubview(backgroundImageView)
+        addSubview(backgroundImageView)
         addSubview(stackView)
         backgroundImageView.setAnchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
         //set layout for stackview

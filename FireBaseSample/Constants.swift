@@ -29,11 +29,11 @@ struct Device {
 
 // Constants for keys
 struct AppKeys {
-    static let TABBAR_HEIGHT = Int(UITabBarController().tabBar.frame.size.height)
 }
 
 // Constants for URL
 struct AppLayoutParams {
+    static let TABBAR_HEIGHT = Int(UITabBarController().tabBar.frame.size.height)
 }
 
 // Constants for URL

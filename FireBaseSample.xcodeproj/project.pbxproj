@@ -27,7 +27,7 @@
 		7D6C157220D300FF008F919F /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C156F20D300FF008F919F /* ListViewController.swift */; };
 		7D6C157320D300FF008F919F /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157020D300FF008F919F /* FavoritesViewController.swift */; };
 		7D6C157620D30568008F919F /* UITabBarController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157520D30568008F919F /* UITabBarController+Extension.swift */; };
-		7D6C157820D30F7B008F919F /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157720D30F7B008F919F /* AddMealViewController.swift */; };
+		7D6C157820D30F7B008F919F /* AddMealViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157720D30F7B008F919F /* AddMealViewController2.swift */; };
 		7D6C157A20D30F9A008F919F /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157920D30F9A008F919F /* AccountViewController.swift */; };
 		7D6C157C20D30FBA008F919F /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C157B20D30FBA008F919F /* MapViewController.swift */; };
 		7D6C158320D31242008F919F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D6C158220D31242008F919F /* Constants.swift */; };
@@ -39,7 +39,7 @@
 		7DBD84CD20D7C3D00067B98A /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD84CC20D7C3D00067B98A /* Info.swift */; };
 		7DD8C9A220D67A7E008D273D /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8C9A120D67A7E008D273D /* WelcomeController.swift */; };
 		7DD8C9A420D67C05008D273D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8C9A320D67C05008D273D /* WelcomeView.swift */; };
-		7DF3521E20D9002C00CF9D32 /* AddMealView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3521D20D9002C00CF9D32 /* AddMealView.swift */; };
+		7DF3522820D9507300CF9D32 /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3522620D9507300CF9D32 /* AddMealViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -64,7 +64,7 @@
 		7D6C156F20D300FF008F919F /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		7D6C157020D300FF008F919F /* FavoritesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		7D6C157520D30568008F919F /* UITabBarController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITabBarController+Extension.swift"; sourceTree = "<group>"; };
-		7D6C157720D30F7B008F919F /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
+		7D6C157720D30F7B008F919F /* AddMealViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController2.swift; sourceTree = "<group>"; };
 		7D6C157920D30F9A008F919F /* AccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
 		7D6C157B20D30FBA008F919F /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		7D6C158220D31242008F919F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -78,7 +78,7 @@
 		7DD8C9A320D67C05008D273D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7DD8C9AA20D6E249008D273D /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
 		7DD8C9AC20D6E268008D273D /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
-		7DF3521D20D9002C00CF9D32 /* AddMealView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealView.swift; sourceTree = "<group>"; };
+		7DF3522620D9507300CF9D32 /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
 		C0E3933A2345BB138F4CE800 /* Pods-FireBaseSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBaseSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireBaseSample/Pods-FireBaseSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -135,6 +135,7 @@
 				7D7B4C4C20D5D40B00652C4A /* Authentication */,
 				7D6C157420D30116008F919F /* TabBar */,
 				7D7B4C4B20D5D3F600652C4A /* FireBase */,
+				7DF3521F20D94E7500CF9D32 /* XIBs */,
 				7D7B4C4A20D5D3B800652C4A /* Helpers */,
 				7D6C158420D31C8B008F919F /* Resources */,
 				7D3B657220C480DE00189C2D /* Extensions */,
@@ -219,8 +220,8 @@
 		7D6C157E20D30FF8008F919F /* AddTab */ = {
 			isa = PBXGroup;
 			children = (
-				7D6C157720D30F7B008F919F /* AddMealViewController.swift */,
-				7DF3521D20D9002C00CF9D32 /* AddMealView.swift */,
+				7D6C157720D30F7B008F919F /* AddMealViewController2.swift */,
+				7DF3522620D9507300CF9D32 /* AddMealViewController.swift */,
 			);
 			path = AddTab;
 			sourceTree = "<group>";
@@ -327,6 +328,29 @@
 				7D6C158120D31029008F919F /* AccountTab */,
 			);
 			path = Tabs;
+			sourceTree = "<group>";
+		};
+		7DF3521F20D94E7500CF9D32 /* XIBs */ = {
+			isa = PBXGroup;
+			children = (
+				7DF3522020D94E7E00CF9D32 /* iPhone */,
+				7DF3522120D94E8800CF9D32 /* iPad */,
+			);
+			path = XIBs;
+			sourceTree = "<group>";
+		};
+		7DF3522020D94E7E00CF9D32 /* iPhone */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPhone;
+			sourceTree = "<group>";
+		};
+		7DF3522120D94E8800CF9D32 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = iPad;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -458,14 +482,13 @@
 				7D6C157220D300FF008F919F /* ListViewController.swift in Sources */,
 				7D6C157620D30568008F919F /* UITabBarController+Extension.swift in Sources */,
 				7D6C157120D300FF008F919F /* TabBarController.swift in Sources */,
-				7D6C157820D30F7B008F919F /* AddMealViewController.swift in Sources */,
+				7D6C157820D30F7B008F919F /* AddMealViewController2.swift in Sources */,
 				7D3B658320C4822B00189C2D /* UIButton+Extension.swift in Sources */,
 				7D7B4C4620D5CFEE00652C4A /* String+Extension.swift in Sources */,
 				7D467B1E20D325DA0011EAA5 /* UIViewController+Extension.swift in Sources */,
 				7DD8C9A420D67C05008D273D /* WelcomeView.swift in Sources */,
 				7D3B658120C4821900189C2D /* UIColor+Extension.swift in Sources */,
 				7D3B657720C4817A00189C2D /* LoginView.swift in Sources */,
-				7DF3521E20D9002C00CF9D32 /* AddMealView.swift in Sources */,
 				7D3B657B20C481B500189C2D /* SignUpView.swift in Sources */,
 				7D7B4C4920D5D1FF00652C4A /* Strings.swift in Sources */,
 				7D3B657F20C4820A00189C2D /* UITextField+Extension.swift in Sources */,
@@ -476,6 +499,7 @@
 				7D3B655F20C4805100189C2D /* AppDelegate.swift in Sources */,
 				7D3B658520C4823E00189C2D /* UIStackView+Extension.swift in Sources */,
 				7DBD84CD20D7C3D00067B98A /* Info.swift in Sources */,
+				7DF3522820D9507300CF9D32 /* AddMealViewController.swift in Sources */,
 				7D6C157C20D30FBA008F919F /* MapViewController.swift in Sources */,
 				7D6C158320D31242008F919F /* Constants.swift in Sources */,
 			);
@@ -617,7 +641,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MN47LCN82;
 				INFOPLIST_FILE = FireBaseSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = seb.FireBaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
@@ -633,7 +660,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2MN47LCN82;
 				INFOPLIST_FILE = FireBaseSample/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = seb.FireBaseSample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
