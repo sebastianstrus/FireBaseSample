@@ -78,7 +78,6 @@ class ListCell: UITableViewCell {
 
 
 extension UIStackView {
-    
     func addBackground(color: UIColor) {
         let subView = UIView(frame: bounds)
         subView.backgroundColor = color

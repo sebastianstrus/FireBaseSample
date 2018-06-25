@@ -9,6 +9,7 @@
 import UIKit
 import MapKit
 
+
 class MapViewController: UIViewController {
     
     
@@ -21,12 +22,21 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationBar(title: "Map")
-        setupMap()
+        setupMapView()
+        
+
     }
     
-    func setupMap() {
+    func setupMapView() {
         view.addSubview(mapView)
-        mapView.setAnchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        mapView.setAnchor(top: view.topAnchor,
+                          leading: view.leadingAnchor,
+                          bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                          trailing: view.trailingAnchor,
+                          paddingTop: 0,
+                          paddingLeft: 0,
+                          paddingBottom: 0,
+                          paddingRight: 0)
     }
     
 

@@ -47,7 +47,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         tableView.register(ListCell.self, forCellReuseIdentifier: myCellId)
         view.addSubview(tableView)
-        tableView.setAnchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        tableView.setAnchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.topAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
     }
     
     
@@ -69,6 +69,4 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
-
 }
