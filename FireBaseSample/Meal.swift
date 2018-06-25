@@ -1,5 +1,5 @@
 //
-//  CellInfo.swift
+//  Meal.swift
 //  FireBaseSample
 //
 //  Created by Sebastian Strus on 2018-06-18.
@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Info {
+struct Meal {
     var image: String?
     var title: String?
     var rating: Float?

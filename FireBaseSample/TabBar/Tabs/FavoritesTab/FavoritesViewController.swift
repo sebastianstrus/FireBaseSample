@@ -14,6 +14,10 @@ class FavoritesViewController: UIViewController {
         super.viewDidLoad()
 
         setupNavigationBar(title: "Favorites")
+        setupCollectionView()
+    }
+    
+    func setupCollectionView() {
         
     }
     

@@ -14,7 +14,10 @@ class AccountViewController: UIViewController {
         super.viewDidLoad()
         
         setupNavigationBar(title: "Account")
-        
+        setupViews()
     }
 
+    func setupViews() {
+        
+    }
 }

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18E18BB7AFF5E543A8CFA652 /* Pods_FireBaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4777843B5FEB559CD1D6CAA1 /* Pods_FireBaseSample.framework */; };
+		7D30A3DA20DF071400F34A94 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D30A3D920DF071400F34A94 /* Data.swift */; };
 		7D3B655F20C4805100189C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B655E20C4805100189C2D /* AppDelegate.swift */; };
 		7D3B656620C4805100189C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B656520C4805100189C2D /* Assets.xcassets */; };
 		7D3B656920C4805100189C2D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B656720C4805100189C2D /* LaunchScreen.storyboard */; };
@@ -36,15 +37,19 @@
 		7D7B4C4620D5CFEE00652C4A /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B4C4520D5CFEE00652C4A /* String+Extension.swift */; };
 		7D7B4C4920D5D1FF00652C4A /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D7B4C4820D5D1FF00652C4A /* Strings.swift */; };
 		7D90CA1720D826CF00C17C71 /* ListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D90CA1620D826CF00C17C71 /* ListCell.swift */; };
-		7DBD84CD20D7C3D00067B98A /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD84CC20D7C3D00067B98A /* Info.swift */; };
+		7DBD84CD20D7C3D00067B98A /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DBD84CC20D7C3D00067B98A /* Meal.swift */; };
 		7DD8C9A220D67A7E008D273D /* WelcomeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8C9A120D67A7E008D273D /* WelcomeController.swift */; };
 		7DD8C9A420D67C05008D273D /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DD8C9A320D67C05008D273D /* WelcomeView.swift */; };
 		7DF3522820D9507300CF9D32 /* AddMealViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3522620D9507300CF9D32 /* AddMealViewController.swift */; };
+		7DF3525720DBAC2900CF9D32 /* SoundManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3525620DBAC2900CF9D32 /* SoundManager.swift */; };
+		7DF3525A20DBB2F200CF9D32 /* DatePopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3525920DBB2F200CF9D32 /* DatePopupView.swift */; };
+		7DF3526220DC2A5600CF9D32 /* Notification.Name+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7DF3526120DC2A5600CF9D32 /* Notification.Name+extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		304D64DBB810B0B579AED268 /* Pods-FireBaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireBaseSample/Pods-FireBaseSample.release.xcconfig"; sourceTree = "<group>"; };
 		4777843B5FEB559CD1D6CAA1 /* Pods_FireBaseSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireBaseSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D30A3D920DF071400F34A94 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		7D3B655B20C4805100189C2D /* FireBaseSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3B655E20C4805100189C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7D3B656520C4805100189C2D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,12 +78,15 @@
 		7D7B4C4520D5CFEE00652C4A /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 		7D7B4C4820D5D1FF00652C4A /* Strings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		7D90CA1620D826CF00C17C71 /* ListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListCell.swift; sourceTree = "<group>"; };
-		7DBD84CC20D7C3D00067B98A /* Info.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
+		7DBD84CC20D7C3D00067B98A /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		7DD8C9A120D67A7E008D273D /* WelcomeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeController.swift; sourceTree = "<group>"; };
 		7DD8C9A320D67C05008D273D /* WelcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		7DD8C9AA20D6E249008D273D /* LuckiestGuy-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LuckiestGuy-Regular.ttf"; sourceTree = "<group>"; };
 		7DD8C9AC20D6E268008D273D /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
 		7DF3522620D9507300CF9D32 /* AddMealViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMealViewController.swift; sourceTree = "<group>"; };
+		7DF3525620DBAC2900CF9D32 /* SoundManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundManager.swift; sourceTree = "<group>"; };
+		7DF3525920DBB2F200CF9D32 /* DatePopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePopupView.swift; sourceTree = "<group>"; };
+		7DF3526120DC2A5600CF9D32 /* Notification.Name+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Notification.Name+extension.swift"; sourceTree = "<group>"; };
 		C0E3933A2345BB138F4CE800 /* Pods-FireBaseSample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBaseSample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FireBaseSample/Pods-FireBaseSample.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,13 +146,15 @@
 				7DF3521F20D94E7500CF9D32 /* XIBs */,
 				7D7B4C4A20D5D3B800652C4A /* Helpers */,
 				7D6C158420D31C8B008F919F /* Resources */,
+				7DF3525820DBB2B700CF9D32 /* Custom Controls */,
 				7D3B657220C480DE00189C2D /* Extensions */,
 				7D3B657320C4811200189C2D /* Supporting files */,
 				7D3B655E20C4805100189C2D /* AppDelegate.swift */,
 				7D3B656720C4805100189C2D /* LaunchScreen.storyboard */,
 				7D3B656A20C4805100189C2D /* Info.plist */,
 				7D6C158220D31242008F919F /* Constants.swift */,
-				7DBD84CC20D7C3D00067B98A /* Info.swift */,
+				7DBD84CC20D7C3D00067B98A /* Meal.swift */,
+				7D30A3D920DF071400F34A94 /* Data.swift */,
 			);
 			path = FireBaseSample;
 			sourceTree = "<group>";
@@ -178,6 +188,7 @@
 				7D6C157520D30568008F919F /* UITabBarController+Extension.swift */,
 				7D467B1D20D325DA0011EAA5 /* UIViewController+Extension.swift */,
 				7D7B4C4520D5CFEE00652C4A /* String+Extension.swift */,
+				7DF3526120DC2A5600CF9D32 /* Notification.Name+extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -288,6 +299,7 @@
 		7D7B4C4A20D5D3B800652C4A /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				7DF3525620DBAC2900CF9D32 /* SoundManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -351,6 +363,14 @@
 			children = (
 			);
 			path = iPad;
+			sourceTree = "<group>";
+		};
+		7DF3525820DBB2B700CF9D32 /* Custom Controls */ = {
+			isa = PBXGroup;
+			children = (
+				7DF3525920DBB2F200CF9D32 /* DatePopupView.swift */,
+			);
+			path = "Custom Controls";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -476,6 +496,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7DF3526220DC2A5600CF9D32 /* Notification.Name+extension.swift in Sources */,
 				7D3B657920C481A300189C2D /* SignUpController.swift in Sources */,
 				7D3B657520C4816B00189C2D /* LoginController.swift in Sources */,
 				7D6C157A20D30F9A008F919F /* AccountViewController.swift in Sources */,
@@ -486,6 +507,7 @@
 				7D3B658320C4822B00189C2D /* UIButton+Extension.swift in Sources */,
 				7D7B4C4620D5CFEE00652C4A /* String+Extension.swift in Sources */,
 				7D467B1E20D325DA0011EAA5 /* UIViewController+Extension.swift in Sources */,
+				7D30A3DA20DF071400F34A94 /* Data.swift in Sources */,
 				7DD8C9A420D67C05008D273D /* WelcomeView.swift in Sources */,
 				7D3B658120C4821900189C2D /* UIColor+Extension.swift in Sources */,
 				7D3B657720C4817A00189C2D /* LoginView.swift in Sources */,
@@ -493,15 +515,17 @@
 				7D7B4C4920D5D1FF00652C4A /* Strings.swift in Sources */,
 				7D3B657F20C4820A00189C2D /* UITextField+Extension.swift in Sources */,
 				7D6C158A20D31DFC008F919F /* UIView+Extension.swift in Sources */,
+				7DF3525720DBAC2900CF9D32 /* SoundManager.swift in Sources */,
 				7D6C157320D300FF008F919F /* FavoritesViewController.swift in Sources */,
 				7D90CA1720D826CF00C17C71 /* ListCell.swift in Sources */,
 				7DD8C9A220D67A7E008D273D /* WelcomeController.swift in Sources */,
 				7D3B655F20C4805100189C2D /* AppDelegate.swift in Sources */,
 				7D3B658520C4823E00189C2D /* UIStackView+Extension.swift in Sources */,
-				7DBD84CD20D7C3D00067B98A /* Info.swift in Sources */,
+				7DBD84CD20D7C3D00067B98A /* Meal.swift in Sources */,
 				7DF3522820D9507300CF9D32 /* AddMealViewController.swift in Sources */,
 				7D6C157C20D30FBA008F919F /* MapViewController.swift in Sources */,
 				7D6C158320D31242008F919F /* Constants.swift in Sources */,
+				7DF3525A20DBB2F200CF9D32 /* DatePopupView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

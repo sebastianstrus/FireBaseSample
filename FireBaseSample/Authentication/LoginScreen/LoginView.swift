@@ -24,8 +24,8 @@ class LoginView: UIView {
         let stackView = createStackView(views: [emailTextField, passwordTextField, loginButton, cancelButton])
         addSubview(backgroundImageView)
         addSubview(stackView)
-        backgroundImageView.setAnchor(top: self.topAnchor, left: self.leftAnchor, bottom: self.bottomAnchor, right: self.rightAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
-        stackView.setAnchor(top: nil, left: nil, bottom: nil, right: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0    , width: self.frame.width - (Device.IS_IPHONE ? 60 : 300), height: Device.IS_IPHONE ? 210 : 420)
+        backgroundImageView.setAnchor(top: self.topAnchor, leading: self.leadingAnchor, bottom: self.bottomAnchor, trailing: self.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        stackView.setAnchor(top: nil, leading: nil, bottom: nil, trailing: nil, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0    , width: self.frame.width - (Device.IS_IPHONE ? 60 : 300), height: Device.IS_IPHONE ? 210 : 420)
         stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor).isActive = true
         stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
     }

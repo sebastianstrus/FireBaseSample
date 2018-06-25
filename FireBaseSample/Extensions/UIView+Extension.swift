@@ -13,9 +13,9 @@ extension UIView {
     func setAnchor(width: CGFloat, height: CGFloat) {
         
         self.setAnchor(top: nil,
-                       left: nil,
+                       leading: nil,
                        bottom: nil,
-                       right: nil,
+                       trailing: nil,
                        paddingTop: 0,
                        paddingLeft: 0,
                        paddingBottom: 0,
@@ -24,7 +24,7 @@ extension UIView {
                        height: height)
     }
     
-    func setAnchor(top: NSLayoutYAxisAnchor?, left: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, right: NSLayoutXAxisAnchor?, paddingTop: CGFloat, paddingLeft: CGFloat, paddingBottom: CGFloat, paddingRight: CGFloat, width: CGFloat = 0, height: CGFloat = 0) {
+    func setAnchor(top: NSLayoutYAxisAnchor?, leading: NSLayoutXAxisAnchor?, bottom: NSLayoutYAxisAnchor?, trailing: NSLayoutXAxisAnchor?, paddingTop: CGFloat, paddingLeft: CGFloat, paddingBottom: CGFloat, paddingRight: CGFloat, width: CGFloat = 0, height: CGFloat = 0) {
         
         self.translatesAutoresizingMaskIntoConstraints = false
         
@@ -32,16 +32,16 @@ extension UIView {
             self.topAnchor.constraint(equalTo: top, constant: paddingTop).isActive = true
         }
         
-        if let left = left {
-            self.leftAnchor.constraint(equalTo: left, constant: paddingLeft).isActive = true
+        if let leading = leading {
+            self.leadingAnchor.constraint(equalTo: leading, constant: paddingLeft).isActive = true
         }
         
         if let bottom = bottom {
             self.bottomAnchor.constraint(equalTo: bottom, constant: -paddingBottom).isActive = true
         }
         
-        if let right = right {
-            self.rightAnchor.constraint(equalTo: right, constant: -paddingRight).isActive = true
+        if let trailing = trailing {
+            self.trailingAnchor.constraint(equalTo: trailing, constant: -paddingRight).isActive = true
         }
         
         if width != 0 {
@@ -61,11 +61,11 @@ extension UIView {
         return topAnchor
     }
     
-    var safeLeftAnchor: NSLayoutXAxisAnchor {
+    var safeLeadingAnchor: NSLayoutXAxisAnchor {
         if #available(iOS 11.0, *) {
-            return safeAreaLayoutGuide.leftAnchor
+            return safeAreaLayoutGuide.leadingAnchor
         }
-        return leftAnchor
+        return leadingAnchor
     }
     
     var safeBottomAnchor: NSLayoutYAxisAnchor {
@@ -75,11 +75,11 @@ extension UIView {
         return bottomAnchor
     }
     
-    var safeRightAnchor: NSLayoutXAxisAnchor {
+    var safeTrailingAnchor: NSLayoutXAxisAnchor {
         if #available(iOS 11.0, *) {
-            return safeAreaLayoutGuide.rightAnchor
+            return safeAreaLayoutGuide.trailingAnchor
         }
-        return rightAnchor
+        return trailingAnchor
     }
     
     func setCellShadow() {

@@ -22,12 +22,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         //let vc = AddMealViewController()
-        //let vc = WelcomeController()
-        //let navController = UINavigationController(rootViewController: vc)
+        let vc = WelcomeController()
+        let navController = UINavigationController(rootViewController: vc)
         
-        //window?.rootViewController = navController
+        window?.rootViewController = navController
         let tabBarVC = TabBarController()
-        window?.rootViewController = tabBarVC
+        //window?.rootViewController = tabBarVC
         
         return true
     }

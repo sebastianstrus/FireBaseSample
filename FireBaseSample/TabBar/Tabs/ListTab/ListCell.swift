@@ -62,12 +62,12 @@ class ListCell: UITableViewCell {
         cellView.addSubview(stackView)
         
         
-        cellView.setAnchor(top: topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, paddingTop: 4, paddingLeft: 8, paddingBottom: 4, paddingRight: 8)
+        cellView.setAnchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, paddingTop: 4, paddingLeft: 8, paddingBottom: 4, paddingRight: 8)
         
-        pictureImageView.setAnchor(top: cellView.topAnchor, left: cellView.leftAnchor, bottom: cellView.bottomAnchor, right: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 0, width: 60, height: 60)
+        pictureImageView.setAnchor(top: cellView.topAnchor, leading: cellView.leadingAnchor, bottom: cellView.bottomAnchor, trailing: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 0, width: 60, height: 60)
         pictureImageView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
         
-        stackView.setAnchor(top: cellView.topAnchor, left: nil, bottom: cellView.bottomAnchor, right: cellView.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 5, paddingRight: 5, width: CGFloat(Device.SCREEN_WIDTH - 100), height: 60)
+        stackView.setAnchor(top: cellView.topAnchor, leading: nil, bottom: cellView.bottomAnchor, trailing: cellView.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 5, paddingRight: 5, width: CGFloat(Device.SCREEN_WIDTH - 100), height: 60)
         stackView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
     }
     
