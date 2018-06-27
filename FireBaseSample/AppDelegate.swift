@@ -16,7 +16,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        UIApplication.shared.statusBarStyle = .lightContent
         //create main window without storyboard
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
@@ -24,12 +23,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //let vc = AccountViewController()
         //let vc = ListViewController()
         //let vc = AddMealViewController()
-        //let vc = WelcomeController()
-        //let navController = UINavigationController(rootViewController: vc)
-        //window?.rootViewController = navController
+        let vc = WelcomeController()
+        let navController = UINavigationController(rootViewController: vc)
+        window?.rootViewController = navController
         
-        let tabBarVC = TabBarController()
-        window?.rootViewController = tabBarVC
+        //let tabBarVC = TabBarController()
+        //window?.rootViewController = tabBarVC
         
         return true
     }

@@ -9,7 +9,15 @@
 import Foundation
 
 struct Meal {
-    var image: String?
+    var image: String?//NSData?
     var title: String?
-    var rating: Float?
+    var rating: Float?//Int
+    
+//    var date: Date?
+//    var isFavorite: Bool
+//    var mealDescription: String?
+//    var placeLatitude: Double
+//    var placeLongitude: Double
+//    var price: String?
+//    var user: User?
 }

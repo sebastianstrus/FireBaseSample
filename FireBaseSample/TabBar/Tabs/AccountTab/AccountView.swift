@@ -12,29 +12,22 @@ class AccountView: UIView {
     
     // views to imageContainer
     var profileImageView: UIImageView = {
-        let iv = UIImageView()
+        let iv = UIImageView(image: #imageLiteral(resourceName: "image_user"))
         iv.translatesAutoresizingMaskIntoConstraints = false
-        iv.backgroundColor = .red
+        iv.layer.borderWidth = Device.IS_IPHONE ? 0.5 : 1
+        iv.layer.borderColor = UIColor.darkGray.cgColor
         return iv
     }()
     
     let cameraButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Camera", for: .normal)
+        let button = UIButton(title: "Camera", color: AppColors.DODGER_BLUE)
         button.addTarget(self, action: #selector(handleCamera), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .yellow
-        button.setTitleColor(UIColor.purple, for: .normal)
         return button
     }()
     
     let libraryButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Library", for: .normal)
+        let button = UIButton(title: "Library", color: AppColors.DODGER_BLUE)
         button.addTarget(self, action: #selector(handleLibrary), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .yellow
-        button.setTitleColor(UIColor.purple, for: .normal)
         return button
     }()
     
@@ -67,22 +60,12 @@ class AccountView: UIView {
     
     // buttons to buttonsContainer
     let logoutButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Log out", for: .normal)
-        button.addTarget(self, action: #selector(handleLogOut), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .yellow
-        button.setTitleColor(UIColor.purple, for: .normal)
+        let button = UIButton(title: "Log out", color: AppColors.DODGER_BLUE)
         return button
     }()
     
     let removeAccountButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Remove account", for: .normal)
-        button.addTarget(self, action: #selector(handleRemoveAccount), for: .touchUpInside)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .yellow
-        button.setTitleColor(UIColor.purple, for: .normal)
+        let button = UIButton(title: "Remove account", color: AppColors.RED_BORDER)
         return button
     }()
 

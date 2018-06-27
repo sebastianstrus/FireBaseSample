@@ -41,21 +41,17 @@ class AccountViewController: UIViewController {
     }
 
     func setupView() {
+        //there is 3 containers in the view
         accountView = AccountView(frame: self.view.frame)
+        
+        //assign actions
         accountView.cameraAction = cameraPressed
         accountView.libraryAction = libraryPressed
         accountView.logutAction = logoutPressed
         accountView.removeAccountAction = removeAccountPressed
-        self.view.addSubview(accountView)
         
-        accountView.setAnchor(top: view.safeAreaLayoutGuide.topAnchor,
-                              leading: view.leadingAnchor,
-                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                              trailing: view.trailingAnchor,
-                              paddingTop: 0,
-                              paddingLeft: 0,
-                              paddingBottom: 0,
-                              paddingRight: 0)
+        self.view.addSubview(accountView)
+        accountView.pinToEdges(view: view)
         
         [imageContainer, infoContainer, buttonsContainer].forEach({accountView.addSubview($0)})
         
@@ -118,8 +114,27 @@ class AccountViewController: UIViewController {
         buttonsContainer.heightAnchor.constraint(equalTo: accountView.heightAnchor, multiplier: 0.20).isActive = true
         buttonsContainer.topAnchor.constraint(equalTo: infoContainer.bottomAnchor).isActive = true
         
-        buttonsContainer.addSubview(accountView.logoutButton)
-        buttonsContainer.addSubview(accountView.removeAccountButton)
+        let stackView: UIStackView = UIStackView(arrangedSubviews: [accountView.logoutButton, accountView.removeAccountButton])
+        stackView.axis = .vertical
+        stackView.backgroundColor = UIColor.red
+        stackView.distribution = .fillProportionally
+        stackView.spacing = 6
+        buttonsContainer.addSubview(stackView)
+        stackView.setAnchor(top: nil,
+                            leading: nil,
+                            bottom: nil,
+                            trailing: nil,
+                            paddingTop: 0,
+                            paddingLeft: 0,
+                            paddingBottom: 0,
+                            paddingRight: 0,
+                            width: 150,
+                            height: 70)
+        stackView.centerYAnchor.constraint(equalTo: buttonsContainer.centerYAnchor).isActive = true
+        stackView.centerXAnchor.constraint(equalTo: buttonsContainer.centerXAnchor).isActive = true
+        
+//        buttonsContainer.addSubview(accountView.logoutButton)
+//        buttonsContainer.addSubview(accountView.removeAccountButton)
         
         
     }
@@ -136,6 +151,7 @@ class AccountViewController: UIViewController {
     
     func logoutPressed() {
         Swift.print("Logout pressed")
+        //dismiss(animated: true, completion: nil)
     }
     
     func removeAccountPressed() {

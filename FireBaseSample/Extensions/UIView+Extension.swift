@@ -92,4 +92,15 @@ extension UIView {
         self.layer.cornerRadius = 4
     }
     
+    func pinToEdges(view: UIView) {
+        setAnchor(top: view.safeAreaLayoutGuide.topAnchor,
+                              leading: view.leadingAnchor,
+                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                              trailing: view.trailingAnchor,
+                              paddingTop: 0,
+                              paddingLeft: 0,
+                              paddingBottom: 0,
+                              paddingRight: 0)
+    }
+    
 }

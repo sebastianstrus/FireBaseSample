@@ -30,6 +30,17 @@ extension UIButton {
         self.backgroundColor = filled ? color : .clear
         self.setAnchor(width: 0, height: Device.IS_IPHONE ? 60 : 120)
     }
+    
+    public convenience init(title: String, color: UIColor) {
+        self.init()
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: title, attributes: [NSAttributedString.Key.font: UIFont.systemFont(ofSize: Device.IS_IPHONE ? 14 : 28), .foregroundColor: color]))
+        self.setAttributedTitle(attributedString, for: .normal)
+        self.layer.cornerRadius = Device.IS_IPHONE ? 5 : 10
+        self.translatesAutoresizingMaskIntoConstraints = true
+        self.layer.borderWidth = Device.IS_IPHONE ? 2 : 3
+        self.backgroundColor = .clear
+        self.layer.borderColor = color.cgColor
+    }
 
     
 }

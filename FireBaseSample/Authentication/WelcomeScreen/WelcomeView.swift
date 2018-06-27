@@ -8,9 +8,6 @@
 
 import UIKit
 
-
-
-
 class WelcomeView: UIView {
     
     
@@ -53,24 +50,15 @@ class WelcomeView: UIView {
         //TODO remove one function
         stackView.setAnchor(top: nil,
                             leading: nil,
-                            bottom: nil,
-                            trailing: nil,
-                            paddingTop: 0,
-                            paddingLeft: 0,
-                            paddingBottom: 0,
-                            paddingRight: 0,
-                            width: self.frame.width - (Device.IS_IPHONE ? 60 : 300),
-                            height: Device.IS_IPHONE ? 130 : 250)
-        stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true
-        stackView.setAnchor(top: nil,
-                            leading: nil,
                             bottom: bottomAnchor,
                             trailing: nil,
                             paddingTop: 0,
                             paddingLeft: 0,
                             paddingBottom: 50,
-                            paddingRight: 0)
-        
+                            paddingRight: 0,
+                            width: self.frame.width - (Device.IS_IPHONE ? 60 : 300),
+                            height: Device.IS_IPHONE ? 130 : 250)
+        stackView.centerXAnchor.constraint(equalTo: self.centerXAnchor).isActive = true        
     }
     
     let firstLabel: UILabel = {

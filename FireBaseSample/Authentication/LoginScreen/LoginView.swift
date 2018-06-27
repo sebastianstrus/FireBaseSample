@@ -48,18 +48,23 @@ class LoginView: UIView {
     
     var backgroundImageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "background")
+        iv.backgroundColor = .white
+        iv.image = UIImage(named: "restaurant")
         iv.contentMode = .scaleAspectFill
         return iv
     }()
     
-    let emailTextField: UITextField = {
-        let tf = UITextField(placeHolder: "Email")
+    let emailTextField: HoshiTextField = {
+        let tf = HoshiTextField(placeHolder: "Email")
+        tf.borderActiveColor = .orange
+        tf.borderInactiveColor = .yellow
         return tf
     }()
     
-    let passwordTextField: UITextField = {
-        let tf = UITextField(placeHolder: "Password")
+    let passwordTextField: HoshiTextField = {
+        let tf = HoshiTextField(placeHolder: "Password")
+        tf.borderActiveColor = .orange
+        tf.borderInactiveColor = .yellow
         return tf
     }()
     

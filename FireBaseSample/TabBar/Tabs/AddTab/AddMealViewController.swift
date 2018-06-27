@@ -34,20 +34,12 @@ class AddMealViewController : UIViewController {
     }()
     
     let cameraButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Camera", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .yellow
-        button.setTitleColor(UIColor.purple, for: .normal)
+        let button = UIButton(title: "Camera", color: AppColors.DODGER_BLUE)
         return button
     }()
     
     let libraryButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Library", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .yellow
-        button.setTitleColor(UIColor.purple, for: .normal)
+        let button = UIButton(title: "Library", color: AppColors.DODGER_BLUE)
         return button
     }()
     
@@ -66,11 +58,7 @@ class AddMealViewController : UIViewController {
     }()
     
     let selectDateButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Select date", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .yellow
-        button.setTitleColor(UIColor.purple, for: .normal)
+        let button = UIButton(title: "Select date", color: AppColors.DODGER_BLUE)
         return button
     }()
     
@@ -84,25 +72,45 @@ class AddMealViewController : UIViewController {
         return label
     }()
     
+    let descriptionLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Add description:"
+        return label
+    }()
+    
+    let favoriteLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Favorite?"
+        return label
+    }()
+    
+    let favoriteSwitch: UISwitch = {
+        let sw = UISwitch()
+        return sw
+    }()
+    
+    
+    
     let mealDescriptionTF: UITextField = {
         let tf = UITextField()
         tf.placeholder = "It was very tasty. :)"
-        tf.backgroundColor = UIColor.lightGray
+        tf.layer.borderWidth = 1
+        tf.layer.cornerRadius = 5
+        tf.layer.borderColor = UIColor.lightGray.cgColor
         return tf
     }()
     
     let mapView: MKMapView = {
         let mv = MKMapView()
+        mv.layer.borderWidth = 1
+        mv.layer.cornerRadius = 5
+        mv.layer.borderColor = UIColor.lightGray.cgColor
         return mv
     }()
 
     
     let saveButton: UIButton = {
-        let button = UIButton(type: .system)
-        button.setTitle("Save meal", for: .normal)
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.backgroundColor = .yellow
-        button.setTitleColor(UIColor.purple, for: .normal)
+        let button = UIButton(title: "Save meal", color: AppColors.DODGER_BLUE)
         return button
     }()
     
@@ -134,7 +142,7 @@ class AddMealViewController : UIViewController {
     }
     
     func setupViews() {
-        [titleTF, mealImageView, cameraButton, libraryButton, cosmosView, selectDateButton, dateLabel, mealDescriptionTF, mapView, saveButton].forEach({scrollView.addSubview($0)})
+        [titleTF, mealImageView, cameraButton, libraryButton, cosmosView, selectDateButton, dateLabel, mealDescriptionTF, descriptionLabel, favoriteLabel, favoriteSwitch, mapView, saveButton].forEach({scrollView.addSubview($0)})
 
         //title textField
         titleTF.translatesAutoresizingMaskIntoConstraints = false
@@ -203,7 +211,7 @@ class AddMealViewController : UIViewController {
                                    paddingBottom: 0,
                                    paddingRight: 0,
                                    width: 100,
-                                   height: 40)
+                                   height: 32)
         dateLabel.setAnchor(top: cosmosView.bottomAnchor,
                             leading: selectDateButton.trailingAnchor,
                             bottom: nil,
@@ -213,10 +221,14 @@ class AddMealViewController : UIViewController {
                             paddingBottom: 0,
                             paddingRight: 0,
                             width: 100,
-                            height: 40)
+                            height: 32)
+        
+        descriptionLabel.setAnchor(top: selectDateButton.bottomAnchor, leading: selectDateButton.leadingAnchor, bottom: nil, trailing: selectDateButton.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 100, height: 32)
+        favoriteSwitch.setAnchor(top: selectDateButton.bottomAnchor, leading: nil, bottom: nil, trailing: mealImageView.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 32)
+        favoriteLabel.setAnchor(top: selectDateButton.bottomAnchor, leading: nil, bottom: nil, trailing: favoriteSwitch.leadingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 5, width: 0, height: 32)
         
         //description field
-        mealDescriptionTF.setAnchor(top: selectDateButton.bottomAnchor,
+        mealDescriptionTF.setAnchor(top: descriptionLabel.bottomAnchor,
                                     leading: mealImageView.leadingAnchor,
                                     bottom: nil,
                                     trailing: mealImageView.trailingAnchor,
@@ -247,7 +259,7 @@ class AddMealViewController : UIViewController {
                              paddingBottom: 20,
                              paddingRight: 0,
                              width: 150,
-                             height: 50)
+                             height: 32)
         saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     

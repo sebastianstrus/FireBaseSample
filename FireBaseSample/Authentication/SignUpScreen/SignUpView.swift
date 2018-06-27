@@ -12,28 +12,38 @@ class SignUpView: UIView {
     
     let backgroundImageView: UIImageView = {
         let iv = UIImageView()
-        iv.image = UIImage(named: "background")
+        iv.backgroundColor = .white
+        iv.image = UIImage(named: "restaurant")
         iv.contentMode = .scaleAspectFill
         return iv
     }()
     
-    let nameTextField: UITextField = {
-        let tf = UITextField(placeHolder: "Name")
+    let nameTextField: HoshiTextField = {
+        let tf = HoshiTextField(placeHolder: "Name")
+
+        tf.borderActiveColor = .orange
+        tf.borderInactiveColor = .yellow
         return tf
     }()
     
-    let emailTextField: UITextField = {
-        let tf = UITextField(placeHolder: "Email")
+    let emailTextField: HoshiTextField = {
+        let tf = HoshiTextField(placeHolder: "Email")
+        tf.borderActiveColor = .orange
+        tf.borderInactiveColor = .yellow
         return tf
     }()
     
-    let passwordTextField: UITextField = {
-        let tf = UITextField(placeHolder: "Password")
+    let passwordTextField: HoshiTextField = {
+        let tf = HoshiTextField(placeHolder: "Password")
+        tf.borderActiveColor = .orange
+        tf.borderInactiveColor = .yellow
         return tf
     }()
     
-    let confirmPasswordTextField: UITextField = {
-        let tf = UITextField(placeHolder: "Confirm password")
+    let confirmPasswordTextField: HoshiTextField = {
+        let tf = HoshiTextField(placeHolder: "Confirm password")
+        tf.borderActiveColor = .orange
+        tf.borderInactiveColor = .yellow
         return tf
     }()
     

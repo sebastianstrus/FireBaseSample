@@ -8,17 +8,99 @@
 
 import UIKit
 
-class FavoritesViewController: UIViewController {
-
+class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+    
+    let cellId = "cellId"
+    
+    let collectionView: UICollectionView = {
+        let layout = UICollectionViewFlowLayout()
+        layout.minimumLineSpacing = 16
+        layout.scrollDirection = .vertical
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.backgroundColor = .clear
+        return cv
+    }()
+    
+    
+    
+    let backgroundIV: UIImageView = {
+        let iv = UIImageView()
+        iv.contentMode = .scaleAspectFill
+        iv.backgroundColor = .green
+        //iv.image = UIImage(named: "blur_background")
+        return iv
+    }()
+    
+    var favoritesMeals: [Meal]  = []
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //get data from FireBase
+        Data.getMeals(complition: { (meals) in
+            self.favoritesMeals = meals
+            self.collectionView.reloadData()
+        })
+        
         setupNavigationBar(title: "Favorites")
         setupCollectionView()
     }
     
     func setupCollectionView() {
+        collectionView.delegate = self
+        collectionView.dataSource = self
         
+        collectionView.register(MealCell.self, forCellWithReuseIdentifier: cellId)
+        
+        view.addSubview(backgroundIV)
+        view.addSubview(collectionView)
+        
+        backgroundIV.setAnchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        collectionView.setAnchor(top: view.topAnchor,
+                                  leading: view.leadingAnchor,
+                                  bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                                  trailing: view.trailingAnchor,
+                                  paddingTop: 0,
+                                  paddingLeft: 10,
+                                  paddingBottom: 0,
+                                  paddingRight: 10)
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return favoritesMeals.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! MealCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: view.frame.width / 3 - 16, height: view.frame.width / 3 - 16)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        if section == 0 {
+            return UIEdgeInsets(top: 10, left: 0, bottom: 10, right: 0)
+        } else {
+            return UIEdgeInsets(top: 10, left: 8, bottom: 10, right: 8)
+        }
     }
     
 }
+
+class MealCell: UICollectionViewCell {
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        backgroundColor = .red
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+}
+
