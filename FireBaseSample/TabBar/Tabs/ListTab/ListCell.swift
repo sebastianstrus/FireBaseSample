@@ -11,14 +11,14 @@ import Cosmos
 
 class ListCell: UITableViewCell {
     
-    let cellView: UIView = {
+    private let cellView: UIView = {
         let view = UIView()
         view.backgroundColor = .white
         view.setCellShadow()
         return view
     }()
     
-    let pictureImageView: UIImageView = {
+    private let pictureImageView: UIImageView = {
         let iv = UIImageView()
         iv.contentMode = .scaleAspectFit
         iv.backgroundColor = .red
@@ -32,7 +32,7 @@ class ListCell: UITableViewCell {
         return label
     }()
     
-    let cosmosView: CosmosView = {
+    private let cosmosView: CosmosView = {
         let cv = CosmosView()
         cv.settings.updateOnTouch = false
         cv.settings.fillMode = .half
@@ -49,7 +49,7 @@ class ListCell: UITableViewCell {
         setup()
     }
     
-    func setup() {
+    private func setup() {
         backgroundColor = AppColors.SILVER_GREY
         addSubview(cellView)
         cellView.addSubview(pictureImageView)
@@ -123,15 +123,3 @@ class ListCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
-
-extension UIStackView {
-    func addBackground(color: UIColor) {
-        let subView = UIView(frame: bounds)
-        subView.backgroundColor = color
-        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        insertSubview(subView, at: 0)
-    }
-    
-}
-

@@ -13,7 +13,7 @@ import MapKit
 class MapViewController: UIViewController {
     
     
-    let mapView: MKMapView = {
+    private let mapView: MKMapView = {
         let mv = MKMapView()
         return mv
     }()
@@ -27,16 +27,9 @@ class MapViewController: UIViewController {
 
     }
     
-    func setupMapView() {
+    private func setupMapView() {
         view.addSubview(mapView)
-        mapView.setAnchor(top: view.topAnchor,
-                          leading: view.leadingAnchor,
-                          bottom: view.safeAreaLayoutGuide.bottomAnchor,
-                          trailing: view.trailingAnchor,
-                          paddingTop: 0,
-                          paddingLeft: 0,
-                          paddingBottom: 0,
-                          paddingRight: 0)
+        mapView.pinToEdges(view: view)
     }
     
 

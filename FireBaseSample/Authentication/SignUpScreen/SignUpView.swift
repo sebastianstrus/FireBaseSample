@@ -11,9 +11,7 @@ import UIKit
 class SignUpView: UIView {
     
     let backgroundImageView: UIImageView = {
-        let iv = UIImageView()
-        iv.backgroundColor = .white
-        iv.image = UIImage(named: "restaurant")
+        let iv = UIImageView(image: #imageLiteral(resourceName: "restaurant"))
         iv.contentMode = .scaleAspectFill
         return iv
     }()

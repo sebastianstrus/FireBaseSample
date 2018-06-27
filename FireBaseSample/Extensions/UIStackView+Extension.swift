@@ -8,12 +8,11 @@
 
 import UIKit
 
-extension UIView {
-    func createStackView(views: [UIView]) -> UIStackView {
-        let stackView = UIStackView(arrangedSubviews: views)
-        stackView.axis = .vertical
-        stackView.distribution = .fillProportionally
-        stackView.spacing = Device.IS_IPHONE ? 10 : 20
-        return stackView
+extension UIStackView {
+    func addBackground(color: UIColor) {
+        let subView = UIView(frame: bounds)
+        subView.backgroundColor = color
+        subView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        insertSubview(subView, at: 0)
     }
 }

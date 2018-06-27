@@ -10,6 +10,14 @@ import UIKit
 
 extension UIView {
     
+    func createStackView(views: [UIView]) -> UIStackView {
+        let stackView = UIStackView(arrangedSubviews: views)
+        stackView.axis = .vertical
+        stackView.distribution = .fillProportionally
+        stackView.spacing = Device.IS_IPHONE ? 10 : 20
+        return stackView
+    }
+    
     func setAnchor(width: CGFloat, height: CGFloat) {
         
         self.setAnchor(top: nil,

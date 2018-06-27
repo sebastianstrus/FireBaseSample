@@ -6,7 +6,7 @@ import MapKit
 class AddMealViewController : UIViewController {
     
     // scroll view
-    lazy var scrollView: UIScrollView = {
+    private lazy var scrollView: UIScrollView = {
         let sv = UIScrollView()
         sv.backgroundColor = .white
         //sv.contentSize.height = 2000 // automatically
@@ -14,7 +14,7 @@ class AddMealViewController : UIViewController {
     }()
     
     // all views
-    let titleTF: UITextField = {
+    private let titleTF: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Enter title"
         tf.backgroundColor = .white
@@ -22,7 +22,7 @@ class AddMealViewController : UIViewController {
         return tf
     }()
     
-    let mealImageView: UIImageView = {
+    private let mealImageView: UIImageView = {
         let iv = UIImageView(image: #imageLiteral(resourceName: "table"))
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.backgroundColor = .red
@@ -33,18 +33,18 @@ class AddMealViewController : UIViewController {
         return iv
     }()
     
-    let cameraButton: UIButton = {
+    private let cameraButton: UIButton = {
         let button = UIButton(title: "Camera", color: AppColors.DODGER_BLUE)
         return button
     }()
     
-    let libraryButton: UIButton = {
+    private let libraryButton: UIButton = {
         let button = UIButton(title: "Library", color: AppColors.DODGER_BLUE)
         return button
     }()
     
     
-    let cosmosView: CosmosView = {
+    private let cosmosView: CosmosView = {
         let cv = CosmosView()
         cv.settings.updateOnTouch = true
         cv.settings.fillMode = .half
@@ -57,12 +57,12 @@ class AddMealViewController : UIViewController {
         return cv
     }()
     
-    let selectDateButton: UIButton = {
+    private let selectDateButton: UIButton = {
         let button = UIButton(title: "Select date", color: AppColors.DODGER_BLUE)
         return button
     }()
     
-    let dateLabel: UILabel = {
+    private let dateLabel: UILabel = {
         let label = UILabel()
         //set current Date as default
         let date = Date()
@@ -72,26 +72,24 @@ class AddMealViewController : UIViewController {
         return label
     }()
     
-    let descriptionLabel: UILabel = {
+    private let descriptionLabel: UILabel = {
         let label = UILabel()
         label.text = "Add description:"
         return label
     }()
     
-    let favoriteLabel: UILabel = {
+    private let favoriteLabel: UILabel = {
         let label = UILabel()
         label.text = "Favorite?"
         return label
     }()
     
-    let favoriteSwitch: UISwitch = {
+    private let favoriteSwitch: UISwitch = {
         let sw = UISwitch()
         return sw
     }()
     
-    
-    
-    let mealDescriptionTF: UITextField = {
+    private let mealDescriptionTF: UITextField = {
         let tf = UITextField()
         tf.placeholder = "It was very tasty. :)"
         tf.layer.borderWidth = 1
@@ -100,22 +98,18 @@ class AddMealViewController : UIViewController {
         return tf
     }()
     
-    let mapView: MKMapView = {
+    private let mapView: MKMapView = {
         let mv = MKMapView()
         mv.layer.borderWidth = 1
         mv.layer.cornerRadius = 5
         mv.layer.borderColor = UIColor.lightGray.cgColor
         return mv
     }()
-
     
-    let saveButton: UIButton = {
+    private let saveButton: UIButton = {
         let button = UIButton(title: "Save meal", color: AppColors.DODGER_BLUE)
         return button
     }()
-    
-    
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -129,7 +123,7 @@ class AddMealViewController : UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(AddMealViewController.keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
     
-    func setupScrollView() {
+    private func setupScrollView() {
         view.addSubview(scrollView)
         scrollView.setAnchor(top: view.safeTopAnchor,
                              leading: view.safeLeadingAnchor,
@@ -141,7 +135,7 @@ class AddMealViewController : UIViewController {
                              paddingRight: 0)
     }
     
-    func setupViews() {
+    private func setupViews() {
         [titleTF, mealImageView, cameraButton, libraryButton, cosmosView, selectDateButton, dateLabel, mealDescriptionTF, descriptionLabel, favoriteLabel, favoriteSwitch, mapView, saveButton].forEach({scrollView.addSubview($0)})
 
         //title textField
@@ -176,7 +170,7 @@ class AddMealViewController : UIViewController {
                                paddingBottom: 0,
                                paddingRight: 0,
                                width: CGFloat(Device.SCREEN_WIDTH/4),
-                               height: 30)
+                               height: Device.IS_IPHONE ? 32 : 64)
         libraryButton.setAnchor(top: mealImageView.bottomAnchor,
                                 leading: nil,
                                 bottom: nil,
@@ -186,7 +180,7 @@ class AddMealViewController : UIViewController {
                                 paddingBottom: 0,
                                 paddingRight: 20,
                                 width: CGFloat(Device.SCREEN_WIDTH/4),
-                                height: 30)
+                                height: Device.IS_IPHONE ? 32 : 64)
         
         //cosmos view
         cosmosView.setAnchor(top: cameraButton.bottomAnchor,
@@ -206,44 +200,45 @@ class AddMealViewController : UIViewController {
                                    leading: mealImageView.leadingAnchor,
                                    bottom: nil,
                                    trailing: nil,
-                                   paddingTop: 10,
+                                   paddingTop: Device.IS_IPHONE ? 10 : 20,
                                    paddingLeft: 0,
                                    paddingBottom: 0,
                                    paddingRight: 0,
-                                   width: 100,
-                                   height: 32)
-        dateLabel.setAnchor(top: cosmosView.bottomAnchor,
+                                   width: Device.IS_IPHONE ? 100 : 200,
+                                   height: Device.IS_IPHONE ? 32 : 64)
+        dateLabel.setAnchor(top: nil,
                             leading: selectDateButton.trailingAnchor,
                             bottom: nil,
-                            trailing: mealImageView.trailingAnchor,
+                            trailing: nil,
                             paddingTop: 10,
                             paddingLeft: 10,
                             paddingBottom: 0,
                             paddingRight: 0,
-                            width: 100,
-                            height: 32)
+                            width: Device.IS_IPHONE ? 100 : 200,
+                            height: Device.IS_IPHONE ? 32 : 64)
+        dateLabel.centerYAnchor.constraint(equalTo: selectDateButton.centerYAnchor).isActive = true
         
-        descriptionLabel.setAnchor(top: selectDateButton.bottomAnchor, leading: selectDateButton.leadingAnchor, bottom: nil, trailing: selectDateButton.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 100, height: 32)
-        favoriteSwitch.setAnchor(top: selectDateButton.bottomAnchor, leading: nil, bottom: nil, trailing: mealImageView.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 50, height: 32)
-        favoriteLabel.setAnchor(top: selectDateButton.bottomAnchor, leading: nil, bottom: nil, trailing: favoriteSwitch.leadingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 5, width: 0, height: 32)
+        descriptionLabel.setAnchor(top: selectDateButton.bottomAnchor, leading: selectDateButton.leadingAnchor, bottom: nil, trailing: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: Device.IS_IPHONE ? 140 : 200, height: Device.IS_IPHONE ? 32 : 64)
+        favoriteSwitch.setAnchor(top: selectDateButton.bottomAnchor, leading: nil, bottom: nil, trailing: mealImageView.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: Device.IS_IPHONE ? 50 : 100, height: Device.IS_IPHONE ? 32 : 64)
+        favoriteLabel.setAnchor(top: selectDateButton.bottomAnchor, leading: nil, bottom: nil, trailing: favoriteSwitch.leadingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 5, width: 0, height: Device.IS_IPHONE ? 32 : 64)
         
         //description field
         mealDescriptionTF.setAnchor(top: descriptionLabel.bottomAnchor,
                                     leading: mealImageView.leadingAnchor,
                                     bottom: nil,
                                     trailing: mealImageView.trailingAnchor,
-                                    paddingTop: 10,
+                                    paddingTop: Device.IS_IPHONE ? 10 : 20,
                                     paddingLeft: 0,
                                     paddingBottom: 0,
                                     paddingRight: 0,
                                     width: 0,
-                                    height: 100)
+                                    height: Device.IS_IPHONE ? 70 : 100)
         
         mapView.setAnchor(top: mealDescriptionTF.bottomAnchor,
                           leading: mealDescriptionTF.leadingAnchor,
                           bottom: nil,
                           trailing: mealDescriptionTF.trailingAnchor,
-                          paddingTop: 10,
+                          paddingTop: Device.IS_IPHONE ? 10 : 20,
                           paddingLeft: 0,
                           paddingBottom: 0,
                           paddingRight: 0,
@@ -254,12 +249,12 @@ class AddMealViewController : UIViewController {
                              leading: nil,
                              bottom: scrollView.bottomAnchor,
                              trailing: nil,
-                             paddingTop: 10,
+                             paddingTop: 15,
                              paddingLeft: 0,
                              paddingBottom: 20,
                              paddingRight: 0,
-                             width: 150,
-                             height: 32)
+                             width: Device.IS_IPHONE ? 150 : 300,
+                             height: Device.IS_IPHONE ? 32 : 64)
         saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
@@ -272,6 +267,7 @@ class AddMealViewController : UIViewController {
             }
         }
     }
+    
     @objc func keyboardWillHide(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             if self.view.frame.origin.y != 0{

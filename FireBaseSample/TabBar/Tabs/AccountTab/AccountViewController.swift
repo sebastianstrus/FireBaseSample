@@ -10,23 +10,22 @@ import UIKit
 
 class AccountViewController: UIViewController {
     
-    var accountView: AccountView!
+    private var accountView: AccountView!
     
     
-    let imageContainer: UIView = {
+    private let imageContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    let infoContainer: UIView = {
+    private let infoContainer: UIView = {
         let view = UIView()
-        view.backgroundColor = .gray
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
     
-    let buttonsContainer: UIView = {
+    private let buttonsContainer: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -40,7 +39,7 @@ class AccountViewController: UIViewController {
         setupView()
     }
 
-    func setupView() {
+    private func setupView() {
         //there is 3 containers in the view
         accountView = AccountView(frame: self.view.frame)
         
@@ -128,8 +127,8 @@ class AccountViewController: UIViewController {
                             paddingLeft: 0,
                             paddingBottom: 0,
                             paddingRight: 0,
-                            width: 150,
-                            height: 70)
+                            width: Device.IS_IPHONE ? 150 : 300,
+                            height: Device.IS_IPHONE ? 70 : 140)
         stackView.centerYAnchor.constraint(equalTo: buttonsContainer.centerYAnchor).isActive = true
         stackView.centerXAnchor.constraint(equalTo: buttonsContainer.centerXAnchor).isActive = true
         
@@ -141,20 +140,20 @@ class AccountViewController: UIViewController {
     
     
     //actions
-    func cameraPressed() {
+    private func cameraPressed() {
         Swift.print("Camera pressed")
     }
     
-    func libraryPressed() {
+    private func libraryPressed() {
         Swift.print("Library pressed")
     }
     
-    func logoutPressed() {
+    private func logoutPressed() {
         Swift.print("Logout pressed")
         //dismiss(animated: true, completion: nil)
     }
     
-    func removeAccountPressed() {
+    private func removeAccountPressed() {
         Swift.print("Remove account pressed")
     }
 }

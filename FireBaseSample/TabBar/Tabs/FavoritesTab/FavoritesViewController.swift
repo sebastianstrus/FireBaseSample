@@ -10,9 +10,9 @@ import UIKit
 
 class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
-    let cellId = "cellId"
+    private let cellId = "cellId"
     
-    let collectionView: UICollectionView = {
+    private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = 16
         layout.scrollDirection = .vertical
@@ -23,15 +23,13 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
     
     
     
-    let backgroundIV: UIImageView = {
-        let iv = UIImageView()
+    private let backgroundIV: UIImageView = {
+        let iv = UIImageView(image: #imageLiteral(resourceName: "restaurant"))
         iv.contentMode = .scaleAspectFill
-        iv.backgroundColor = .green
-        //iv.image = UIImage(named: "blur_background")
         return iv
     }()
     
-    var favoritesMeals: [Meal]  = []
+    private var favoritesMeals: [Meal]  = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -46,7 +44,7 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
         setupCollectionView()
     }
     
-    func setupCollectionView() {
+    private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
         
@@ -93,14 +91,5 @@ class FavoritesViewController: UIViewController, UICollectionViewDelegate, UICol
     
 }
 
-class MealCell: UICollectionViewCell {
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        backgroundColor = .red
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-}
+
 

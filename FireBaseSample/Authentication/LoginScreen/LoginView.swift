@@ -47,9 +47,8 @@ class LoginView: UIView {
     }
     
     var backgroundImageView: UIImageView = {
-        let iv = UIImageView()
+        let iv = UIImageView(image: #imageLiteral(resourceName: "restaurant"))
         iv.backgroundColor = .white
-        iv.image = UIImage(named: "restaurant")
         iv.contentMode = .scaleAspectFill
         return iv
     }()

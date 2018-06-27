@@ -79,23 +79,7 @@ class AccountView: UIView {
     
     
     func setup() {
-        
-        
-        
-        
-        
-//        let stackView = createStackView(views: [imageContainer, infoContainer, buttonsContainer])
-//        addSubview(stackView)
-//        stackView.setAnchor(top: topAnchor,
-//                            leading: leadingAnchor,
-//                            bottom: bottomAnchor,
-//                            trailing: trailingAnchor,
-//                            paddingTop: 0,
-//                            paddingLeft: 0,
-//                            paddingBottom: 0,
-//                            paddingRight: 0)
-//        stackView.addBackground(color: .green)
-        
+        //TODO
     }
     
     
