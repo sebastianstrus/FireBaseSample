@@ -48,14 +48,21 @@ class AccountViewController: UIViewController {
         accountView.removeAccountAction = removeAccountPressed
         self.view.addSubview(accountView)
         
-        accountView.setAnchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        accountView.setAnchor(top: view.safeAreaLayoutGuide.topAnchor,
+                              leading: view.leadingAnchor,
+                              bottom: view.safeAreaLayoutGuide.bottomAnchor,
+                              trailing: view.trailingAnchor,
+                              paddingTop: 0,
+                              paddingLeft: 0,
+                              paddingBottom: 0,
+                              paddingRight: 0)
         
         [imageContainer, infoContainer, buttonsContainer].forEach({accountView.addSubview($0)})
         
         //imageContainer
-        imageContainer.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        imageContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.5).isActive = true
-        imageContainer.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        imageContainer.widthAnchor.constraint(equalTo: accountView.widthAnchor).isActive = true
+        imageContainer.heightAnchor.constraint(equalTo: accountView.heightAnchor, multiplier: 0.5).isActive = true
+        imageContainer.topAnchor.constraint(equalTo: accountView.topAnchor).isActive = true
     
         imageContainer.addSubview(accountView.profileImageView)
         imageContainer.addSubview(accountView.cameraButton)
@@ -66,21 +73,40 @@ class AccountViewController: UIViewController {
         accountView.profileImageView.centerXAnchor.constraint(equalTo: imageContainer.centerXAnchor).isActive = true
         accountView.profileImageView.centerYAnchor.constraint(equalTo: imageContainer.centerYAnchor).isActive = true
         
-        accountView.cameraButton.setAnchor(top: accountView.profileImageView.bottomAnchor, leading: accountView.profileImageView.leadingAnchor, bottom: nil, trailing: nil, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 0)
+        accountView.cameraButton.setAnchor(top: accountView.profileImageView.bottomAnchor,
+                                           leading: accountView.profileImageView.leadingAnchor,
+                                           bottom: nil,
+                                           trailing: nil,
+                                           paddingTop: 5,
+                                           paddingLeft: 10,
+                                           paddingBottom: 0,
+                                           paddingRight: 0)
         accountView.cameraButton.widthAnchor.constraint(equalTo: accountView.profileImageView.widthAnchor, multiplier: 0.4).isActive = true
-        accountView.libraryButton.setAnchor(top: accountView.profileImageView.bottomAnchor, leading: nil, bottom: nil, trailing: accountView.profileImageView.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 10)
+        accountView.libraryButton.setAnchor(top: accountView.profileImageView.bottomAnchor,
+                                            leading: nil,
+                                            bottom: nil,
+                                            trailing: accountView.profileImageView.trailingAnchor,
+                                            paddingTop: 5,
+                                            paddingLeft: 0,
+                                            paddingBottom: 0,
+                                            paddingRight: 10)
         accountView.libraryButton.widthAnchor.constraint(equalTo: accountView.profileImageView.widthAnchor, multiplier: 0.4).isActive = true
         
-        
-        
         //info container
-        infoContainer.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        infoContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.25).isActive = true
+        infoContainer.widthAnchor.constraint(equalTo: accountView.widthAnchor).isActive = true
+        infoContainer.heightAnchor.constraint(equalTo: accountView.heightAnchor, multiplier: 0.30).isActive = true
         infoContainer.topAnchor.constraint(equalTo: imageContainer.bottomAnchor).isActive = true
         
         let stackview = view.createStackView(views: [accountView.userNameLabel, accountView.emailLabel, accountView.numberOfMealsLabel, accountView.registrationDateLabel])
         infoContainer.addSubview(stackview)
-        stackview.setAnchor(top: infoContainer.topAnchor, leading: infoContainer.leadingAnchor, bottom: infoContainer.bottomAnchor, trailing: infoContainer.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        stackview.setAnchor(top: infoContainer.topAnchor,
+                            leading: infoContainer.leadingAnchor,
+                            bottom: infoContainer.bottomAnchor,
+                            trailing: infoContainer.trailingAnchor,
+                            paddingTop: 0,
+                            paddingLeft: 0,
+                            paddingBottom: 0,
+                            paddingRight: 0)
         stackview.centerXAnchor.constraint(equalTo: infoContainer.centerXAnchor).isActive = true
         
 
@@ -88,8 +114,8 @@ class AccountViewController: UIViewController {
         
         
         // two buttons container
-        buttonsContainer.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-        buttonsContainer.heightAnchor.constraint(equalTo: view.heightAnchor, multiplier: 0.25).isActive = true
+        buttonsContainer.widthAnchor.constraint(equalTo: accountView.widthAnchor).isActive = true
+        buttonsContainer.heightAnchor.constraint(equalTo: accountView.heightAnchor, multiplier: 0.20).isActive = true
         buttonsContainer.topAnchor.constraint(equalTo: infoContainer.bottomAnchor).isActive = true
         
         buttonsContainer.addSubview(accountView.logoutButton)

@@ -28,8 +28,14 @@ class LoginController: UIViewController {
         self.loginView.loginAction = loginPressed
         self.loginView.cancelAction = cancelPressed
         self.view.addSubview(loginView)
-        loginView.setAnchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
-        
+        loginView.setAnchor(top: view.topAnchor,
+                            leading: view.leadingAnchor,
+                            bottom: view.bottomAnchor,
+                            trailing: view.trailingAnchor,
+                            paddingTop: 0,
+                            paddingLeft: 0,
+                            paddingBottom: 0,
+                            paddingRight: 0)
     }
     
     func loginPressed() {

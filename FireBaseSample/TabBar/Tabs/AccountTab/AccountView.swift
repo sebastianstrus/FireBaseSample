@@ -115,12 +115,13 @@ class AccountView: UIView {
         
     }
     
+    
+    // Actions
     var cameraAction: (() -> Void)?
     var libraryAction: (() -> Void)?
     var logutAction: (() -> Void)?
     var removeAccountAction: (() -> Void)?
     
-    //actions
     @objc func handleCamera() {
         print("Camera")
         cameraAction?()
@@ -137,7 +138,7 @@ class AccountView: UIView {
     }
     
     @objc func handleRemoveAccount() {
-        print("Library")
+        print("RemoveAccount")
         removeAccountAction?()
     }
 }

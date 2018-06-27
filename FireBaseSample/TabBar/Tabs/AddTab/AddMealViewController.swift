@@ -123,7 +123,14 @@ class AddMealViewController : UIViewController {
     
     func setupScrollView() {
         view.addSubview(scrollView)
-        scrollView.setAnchor(top: view.safeTopAnchor, leading: view.safeLeadingAnchor, bottom: view.safeBottomAnchor, trailing: view.safeTrailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        scrollView.setAnchor(top: view.safeTopAnchor,
+                             leading: view.safeLeadingAnchor,
+                             bottom: view.safeBottomAnchor,
+                             trailing: view.safeTrailingAnchor,
+                             paddingTop: 0,
+                             paddingLeft: 0,
+                             paddingBottom: 0,
+                             paddingRight: 0)
     }
     
     func setupViews() {
@@ -138,30 +145,109 @@ class AddMealViewController : UIViewController {
         titleTF.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
         
         //image
-        mealImageView.setAnchor(top: titleTF.bottomAnchor, leading: nil, bottom: nil, trailing: nil, paddingTop: 20, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        mealImageView.setAnchor(top: titleTF.bottomAnchor,
+                                leading: nil,
+                                bottom: nil,
+                                trailing: nil,
+                                paddingTop: 20,
+                                paddingLeft: 0,
+                                paddingBottom: 0,
+                                paddingRight: 0)
         mealImageView.widthAnchor.constraint(equalTo: titleTF.widthAnchor).isActive = true
         mealImageView.heightAnchor.constraint(equalTo: titleTF.widthAnchor).isActive = true
         mealImageView.centerXAnchor.constraint(equalTo: titleTF.centerXAnchor).isActive = true
         mealImageView.alpha = 0.4
         
         // camera and library buttons
-        cameraButton.setAnchor(top: mealImageView.bottomAnchor, leading: mealImageView.leadingAnchor, bottom: nil, trailing: nil, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 0, width: CGFloat(Device.SCREEN_WIDTH/4), height: 30)
-        libraryButton.setAnchor(top: mealImageView.bottomAnchor, leading: nil, bottom: nil, trailing: mealImageView.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 20, width: CGFloat(Device.SCREEN_WIDTH/4), height: 30)
+        cameraButton.setAnchor(top: mealImageView.bottomAnchor,
+                               leading: mealImageView.leadingAnchor,
+                               bottom: nil,
+                               trailing: nil,
+                               paddingTop: 10,
+                               paddingLeft: 20,
+                               paddingBottom: 0,
+                               paddingRight: 0,
+                               width: CGFloat(Device.SCREEN_WIDTH/4),
+                               height: 30)
+        libraryButton.setAnchor(top: mealImageView.bottomAnchor,
+                                leading: nil,
+                                bottom: nil,
+                                trailing: mealImageView.trailingAnchor,
+                                paddingTop: 10,
+                                paddingLeft: 0,
+                                paddingBottom: 0,
+                                paddingRight: 20,
+                                width: CGFloat(Device.SCREEN_WIDTH/4),
+                                height: 30)
         
         //cosmos view
-        cosmosView.setAnchor(top: cameraButton.bottomAnchor, leading: nil, bottom: nil, trailing: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 0)
+        cosmosView.setAnchor(top: cameraButton.bottomAnchor,
+                             leading: nil,
+                             bottom: nil,
+                             trailing: nil,
+                             paddingTop: 10,
+                             paddingLeft: 0,
+                             paddingBottom: 0,
+                             paddingRight: 0,
+                             width: 0,
+                             height: 0)
         cosmosView.centerXAnchor.constraint(equalTo: mealImageView.centerXAnchor).isActive = true
         
         //date info
-        selectDateButton.setAnchor(top: cosmosView.bottomAnchor, leading: mealImageView.leadingAnchor, bottom: nil, trailing: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 100, height: 40)
-        dateLabel.setAnchor(top: cosmosView.bottomAnchor, leading: selectDateButton.trailingAnchor, bottom: nil, trailing: mealImageView.trailingAnchor, paddingTop: 10, paddingLeft: 10, paddingBottom: 0, paddingRight: 0, width: 100, height: 40)
+        selectDateButton.setAnchor(top: cosmosView.bottomAnchor,
+                                   leading: mealImageView.leadingAnchor,
+                                   bottom: nil,
+                                   trailing: nil,
+                                   paddingTop: 10,
+                                   paddingLeft: 0,
+                                   paddingBottom: 0,
+                                   paddingRight: 0,
+                                   width: 100,
+                                   height: 40)
+        dateLabel.setAnchor(top: cosmosView.bottomAnchor,
+                            leading: selectDateButton.trailingAnchor,
+                            bottom: nil,
+                            trailing: mealImageView.trailingAnchor,
+                            paddingTop: 10,
+                            paddingLeft: 10,
+                            paddingBottom: 0,
+                            paddingRight: 0,
+                            width: 100,
+                            height: 40)
         
         //description field
-        mealDescriptionTF.setAnchor(top: selectDateButton.bottomAnchor, leading: mealImageView.leadingAnchor, bottom: nil, trailing: mealImageView.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: 100)
+        mealDescriptionTF.setAnchor(top: selectDateButton.bottomAnchor,
+                                    leading: mealImageView.leadingAnchor,
+                                    bottom: nil,
+                                    trailing: mealImageView.trailingAnchor,
+                                    paddingTop: 10,
+                                    paddingLeft: 0,
+                                    paddingBottom: 0,
+                                    paddingRight: 0,
+                                    width: 0,
+                                    height: 100)
         
-        mapView.setAnchor(top: mealDescriptionTF.bottomAnchor, leading: mealDescriptionTF.leadingAnchor, bottom: nil, trailing: mealDescriptionTF.trailingAnchor, paddingTop: 10, paddingLeft: 0, paddingBottom: 0, paddingRight: 0, width: 0, height: CGFloat(Device.SCREEN_WIDTH * 2 / 3))
+        mapView.setAnchor(top: mealDescriptionTF.bottomAnchor,
+                          leading: mealDescriptionTF.leadingAnchor,
+                          bottom: nil,
+                          trailing: mealDescriptionTF.trailingAnchor,
+                          paddingTop: 10,
+                          paddingLeft: 0,
+                          paddingBottom: 0,
+                          paddingRight: 0,
+                          width: 0,
+                          height: CGFloat(Device.SCREEN_WIDTH * 2 / 3))
         
-        saveButton.setAnchor(top: mapView.bottomAnchor, leading: nil, bottom: scrollView.bottomAnchor, trailing: nil, paddingTop: 10, paddingLeft: 0, paddingBottom: 20, paddingRight: 0, width: 150, height: 50)
+        saveButton.setAnchor(top: mapView.bottomAnchor,
+                             leading: nil,
+                             bottom: scrollView.bottomAnchor,
+                             trailing: nil,
+                             paddingTop: 10,
+                             paddingLeft: 0,
+                             paddingBottom: 20,
+                             paddingRight: 0,
+                             width: 150,
+                             height: 50)
         saveButton.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
     }
     
