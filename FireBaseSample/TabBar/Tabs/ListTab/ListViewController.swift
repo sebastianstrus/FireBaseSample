@@ -35,7 +35,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.allMeals = meals
             self.tableView.reloadData()
         })
-        
+//
         setupNavigationBar(title: "List")
         setupTableView()
         
@@ -47,7 +47,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
         tableView.dataSource = self
         tableView.register(ListCell.self, forCellReuseIdentifier: myCellId)
         view.addSubview(tableView)
-        tableView.setAnchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.topAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
+        tableView.setAnchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.safeAreaLayoutGuide.bottomAnchor, trailing: view.trailingAnchor, paddingTop: 0, paddingLeft: 0, paddingBottom: 0, paddingRight: 0)
     }
     
     
@@ -57,16 +57,16 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return allMeals.count
-        
+
     }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: myCellId, for: indexPath) as! ListCell
         cell.titleLabel.text = allMeals[indexPath.item].title
         return cell
     }
-    
+
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return Device.IS_IPHONE ? 80 : 160
     }
 }

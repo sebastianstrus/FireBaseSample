@@ -28,16 +28,16 @@ class ListCell: UITableViewCell {
     let titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = .darkGray
-        label.font = UIFont.boldSystemFont(ofSize: 26)
+        label.font = AppFonts.LIST_CELL_FONT
         return label
     }()
     
     let cosmosView: CosmosView = {
         let cv = CosmosView()
-        cv.settings.updateOnTouch = true
+        cv.settings.updateOnTouch = false
         cv.settings.fillMode = .half
-        cv.settings.starSize = 30
-        cv.settings.starMargin = 5
+        cv.settings.starSize = Device.IS_IPHONE ? 30 : 60
+        cv.settings.starMargin = Device.IS_IPHONE ? 5 : 10
         cv.settings.filledColor = UIColor.orange
         cv.settings.emptyBorderColor = UIColor.orange
         cv.settings.filledBorderColor = UIColor.orange
@@ -62,13 +62,61 @@ class ListCell: UITableViewCell {
         cellView.addSubview(stackView)
         
         
-        cellView.setAnchor(top: topAnchor, leading: leadingAnchor, bottom: bottomAnchor, trailing: trailingAnchor, paddingTop: 4, paddingLeft: 8, paddingBottom: 4, paddingRight: 8)
+        cellView.setAnchor(top: topAnchor,
+                           leading: leadingAnchor,
+                           bottom: bottomAnchor,
+                           trailing: trailingAnchor,
+                           paddingTop: 4,
+                           paddingLeft: 8,
+                           paddingBottom: 4,
+                           paddingRight: 8)
         
-        pictureImageView.setAnchor(top: cellView.topAnchor, leading: cellView.leadingAnchor, bottom: cellView.bottomAnchor, trailing: nil, paddingTop: 5, paddingLeft: 5, paddingBottom: 5, paddingRight: 0, width: 60, height: 60)
+        pictureImageView.setAnchor(top: nil,
+                                   leading: cellView.leadingAnchor,
+                                   bottom: nil,
+                                   trailing: nil,
+                                   paddingTop: 5,
+                                   paddingLeft: 5,
+                                   paddingBottom: 5,
+                                   paddingRight: 5,
+                                   width: Device.IS_IPHONE ? 60 : 120,
+                                   height: Device.IS_IPHONE ? 60 : 120)
         pictureImageView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
+
+        stackView.setAnchor(top: nil,
+                            leading: cellView.leadingAnchor,
+                            bottom: nil,
+                            trailing: cellView.trailingAnchor,
+                            paddingTop: 0,
+                            paddingLeft: Device.IS_IPHONE ? 84 : 150,
+                            paddingBottom: 0,
+                            paddingRight: 5,
+                            width: 0,
+                            height: Device.IS_IPHONE ? 60 : 120)
+        stackView.centerYAnchor.constraint(equalTo: pictureImageView.centerYAnchor).isActive = true
         
-        stackView.setAnchor(top: cellView.topAnchor, leading: nil, bottom: cellView.bottomAnchor, trailing: cellView.rightAnchor, paddingTop: 5, paddingLeft: 0, paddingBottom: 5, paddingRight: 5, width: CGFloat(Device.SCREEN_WIDTH - 100), height: 60)
-        stackView.centerYAnchor.constraint(equalTo: cellView.centerYAnchor).isActive = true
+        
+        titleLabel.setAnchor(top: nil,
+                             leading: stackView.leadingAnchor,
+                             bottom: nil,
+                             trailing: stackView.trailingAnchor,
+                             paddingTop: 0,
+                             paddingLeft: 0,
+                             paddingBottom: 0,
+                             paddingRight: 0,
+                             width: 0,
+                             height: Device.IS_IPHONE ? 28 : 58)
+        
+        cosmosView.setAnchor(top: nil,
+                             leading: stackView.leadingAnchor,
+                             bottom: nil,
+                             trailing: stackView.trailingAnchor,
+                             paddingTop: 0,
+                             paddingLeft: 0,
+                             paddingBottom: 0,
+                             paddingRight: 0,
+                             width: 0,
+                             height: Device.IS_IPHONE ? 28 : 58)
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -86,3 +134,4 @@ extension UIStackView {
     }
     
 }
+

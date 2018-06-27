@@ -5,7 +5,7 @@ import MapKit
 
 class AddMealViewController : UIViewController {
     
-    //scroll view
+    // scroll view
     lazy var scrollView: UIScrollView = {
         let sv = UIScrollView()
         sv.backgroundColor = .white
@@ -13,31 +13,7 @@ class AddMealViewController : UIViewController {
         return sv
     }()
     
-    
-//    //all views for testing
-//    let topMostView: UIView = {
-//        let v = UIView()
-//        v.backgroundColor = .gray
-//        return v
-//    }()
-//
-//    let middleMostView: UIView = {
-//        let v = UIView()
-//        v.backgroundColor = .darkGray
-//        return v
-//    }()
-//
-//    let bottomMostView: UIView = {
-//        let v = UIView()
-//        v.backgroundColor = .gray
-//        return v
-//    }()
-    
-    
-    
-    
-    
-    
+    // all views
     let titleTF: UITextField = {
         let tf = UITextField()
         tf.placeholder = "Enter title"
@@ -47,7 +23,6 @@ class AddMealViewController : UIViewController {
     }()
     
     let mealImageView: UIImageView = {
-        //let iv = UIImageView()
         let iv = UIImageView(image: #imageLiteral(resourceName: "table"))
         iv.translatesAutoresizingMaskIntoConstraints = false
         iv.backgroundColor = .red
@@ -158,7 +133,7 @@ class AddMealViewController : UIViewController {
         titleTF.translatesAutoresizingMaskIntoConstraints = false
         titleTF.topAnchor.constraint(equalTo: scrollView.topAnchor, constant: 30).isActive = true
         titleTF.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-        titleTF.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        titleTF.heightAnchor.constraint(equalToConstant: Device.IS_IPHONE ? 40 : 80).isActive = true
         titleTF.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
         titleTF.widthAnchor.constraint(equalTo: view.widthAnchor, multiplier: 0.9).isActive = true
         
@@ -167,6 +142,7 @@ class AddMealViewController : UIViewController {
         mealImageView.widthAnchor.constraint(equalTo: titleTF.widthAnchor).isActive = true
         mealImageView.heightAnchor.constraint(equalTo: titleTF.widthAnchor).isActive = true
         mealImageView.centerXAnchor.constraint(equalTo: titleTF.centerXAnchor).isActive = true
+        mealImageView.alpha = 0.4
         
         // camera and library buttons
         cameraButton.setAnchor(top: mealImageView.bottomAnchor, leading: mealImageView.leadingAnchor, bottom: nil, trailing: nil, paddingTop: 10, paddingLeft: 20, paddingBottom: 0, paddingRight: 0, width: CGFloat(Device.SCREEN_WIDTH/4), height: 30)
@@ -209,34 +185,6 @@ class AddMealViewController : UIViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         view.endEditing(true)
     }
-    
-    
-    
-    
-    //set views for testing
-//    func setupViews() {
-//        scrollView.addSubview(topMostView)
-//        topMostView.translatesAutoresizingMaskIntoConstraints = false
-//        topMostView.topAnchor.constraint(equalTo: scrollView.topAnchor).isActive = true
-//        topMostView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-//        topMostView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-//        topMostView.heightAnchor.constraint(equalToConstant: 600).isActive = true
-//
-//        scrollView.addSubview(middleMostView)
-//        middleMostView.translatesAutoresizingMaskIntoConstraints = false
-//        middleMostView.topAnchor.constraint(equalTo: topMostView.bottomAnchor).isActive = true
-//        middleMostView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-//        middleMostView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-//        middleMostView.heightAnchor.constraint(equalToConstant: 600).isActive = true
-//
-//        scrollView.addSubview(bottomMostView)
-//        bottomMostView.translatesAutoresizingMaskIntoConstraints = false
-//        bottomMostView.topAnchor.constraint(equalTo: middleMostView.bottomAnchor).isActive = true
-//        bottomMostView.leadingAnchor.constraint(equalTo: scrollView.leadingAnchor).isActive = true
-//        bottomMostView.widthAnchor.constraint(equalTo: view.widthAnchor).isActive = true
-//        bottomMostView.heightAnchor.constraint(equalToConstant: 100).isActive = true
-//        bottomMostView.bottomAnchor.constraint(equalTo: scrollView.bottomAnchor).isActive = true
-//    }
     
     
     

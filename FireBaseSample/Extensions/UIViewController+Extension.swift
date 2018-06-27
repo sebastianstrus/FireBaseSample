@@ -28,8 +28,7 @@ extension UIViewController {
     }
     func setupNavigationBar(title: String) {
         view.backgroundColor = .white
-        //navigationController?.navigationBar.prefersLargeTitles = true
         navigationItem.title = title
-        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray, NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 20)]
+        navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.darkGray, NSAttributedString.Key.font: AppFonts.NAV_BAR_FONT]
     }
 }

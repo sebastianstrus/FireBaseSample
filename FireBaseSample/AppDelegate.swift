@@ -21,12 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window = UIWindow(frame: UIScreen.main.bounds)
         window?.makeKeyAndVisible()
         
+        let vc = AccountViewController()
+        //let vc = ListViewController()
         //let vc = AddMealViewController()
-        let vc = WelcomeController()
+        //let vc = WelcomeController()
         let navController = UINavigationController(rootViewController: vc)
-        
         window?.rootViewController = navController
-        let tabBarVC = TabBarController()
+        
+        //let tabBarVC = TabBarController()
         //window?.rootViewController = tabBarVC
         
         return true

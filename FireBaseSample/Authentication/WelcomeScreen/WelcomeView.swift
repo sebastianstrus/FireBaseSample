@@ -43,7 +43,7 @@ class WelcomeView: UIView {
     
     let firstLabel: UILabel = {
         let label = UILabel()
-        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: Strings.app_title, attributes: [NSAttributedString.Key.font: UIFont(name: "LuckiestGuy-Regular", size: Device.IS_IPHONE ? 90 : 180)!, .foregroundColor: UIColor.white]))
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: Strings.app_title, attributes: [NSAttributedString.Key.font: AppFonts.TITLE_FONT, .foregroundColor: UIColor.white]))
         label.attributedText = attributedString
         label.textAlignment = NSTextAlignment.center
         label.shadowColor = .black
@@ -53,7 +53,7 @@ class WelcomeView: UIView {
     
     let secondLabel: UILabel = {
         let label = UILabel()
-        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: Strings.app_subtitle, attributes: [NSAttributedString.Key.font: UIFont(name: "Oswald-Medium", size: Device.IS_IPHONE ? 40 : 80)!, .foregroundColor: UIColor.white]))
+        let attributedString = NSMutableAttributedString(attributedString: NSAttributedString(string: Strings.app_subtitle, attributes: [NSAttributedString.Key.font: AppFonts.SUBTITLE_FONT, .foregroundColor: UIColor.white]))
         label.attributedText = attributedString
         label.textAlignment = NSTextAlignment.center
         label.shadowColor = .black
