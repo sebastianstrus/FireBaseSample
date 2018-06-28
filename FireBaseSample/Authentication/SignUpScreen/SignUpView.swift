@@ -17,7 +17,7 @@ class SignUpView: UIView {
     }()
     
     let nameTextField: HoshiTextField = {
-        let tf = HoshiTextField(placeHolder: "Name")
+        let tf = HoshiTextField(placeHolder: "Name".localized)
 
         tf.borderActiveColor = .orange
         tf.borderInactiveColor = .yellow
@@ -25,34 +25,34 @@ class SignUpView: UIView {
     }()
     
     let emailTextField: HoshiTextField = {
-        let tf = HoshiTextField(placeHolder: "Email")
+        let tf = HoshiTextField(placeHolder: "Email".localized)
         tf.borderActiveColor = .orange
         tf.borderInactiveColor = .yellow
         return tf
     }()
     
     let passwordTextField: HoshiTextField = {
-        let tf = HoshiTextField(placeHolder: "Password")
+        let tf = HoshiTextField(placeHolder: "Password".localized)
         tf.borderActiveColor = .orange
         tf.borderInactiveColor = .yellow
         return tf
     }()
     
     let confirmPasswordTextField: HoshiTextField = {
-        let tf = HoshiTextField(placeHolder: "Confirm password")
+        let tf = HoshiTextField(placeHolder: "Confirm password".localized)
         tf.borderActiveColor = .orange
         tf.borderInactiveColor = .yellow
         return tf
     }()
     
     let submitButton: UIButton = {
-        let button = UIButton(title: "Submit", borderColor: AppColors.GREEN_BORDER)
+        let button = UIButton(title: "Submit".localized, borderColor: AppColors.GREEN_BORDER)
         button.addTarget(self, action: #selector(handleSubmit), for: .touchUpInside)
         return button
     }()
     
     let cancelButton: UIButton = {
-        let button = UIButton(title: "Cancel", borderColor: AppColors.RED_BORDER)
+        let button = UIButton(title: "Cancel".localized, borderColor: AppColors.RED_BORDER)
         button.addTarget(self, action: #selector(handleCancel), for: .touchUpInside)
         return button
     }()

@@ -9,8 +9,6 @@
 import UIKit
 
 struct Strings {
-    static let hello_sebastian = "Hello Sebastian Strus".localized
-    static let download_error = "Error in Download".localized
     static let app_title = "FOODY"
     static let app_subtitle = "Find your meal".localized
     static let ok = "OK".localized

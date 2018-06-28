@@ -36,7 +36,7 @@ class ListViewController: UIViewController, UITableViewDelegate, UITableViewData
             self.tableView.reloadData()
         })
 
-        setupNavigationBar(title: "List")
+        setupNavigationBar(title: "List".localized)
         setupTableView()
         
     }

@@ -54,27 +54,27 @@ class LoginView: UIView {
     }()
     
     let emailTextField: HoshiTextField = {
-        let tf = HoshiTextField(placeHolder: "Email")
+        let tf = HoshiTextField(placeHolder: "Email".localized)
         tf.borderActiveColor = .orange
         tf.borderInactiveColor = .yellow
         return tf
     }()
     
     let passwordTextField: HoshiTextField = {
-        let tf = HoshiTextField(placeHolder: "Password")
+        let tf = HoshiTextField(placeHolder: "Password".localized)
         tf.borderActiveColor = .orange
         tf.borderInactiveColor = .yellow
         return tf
     }()
     
     let loginButton: UIButton = {
-        let button = UIButton(title: "Login", borderColor: AppColors.GREEN_BORDER)
+        let button = UIButton(title: "Login".localized, borderColor: AppColors.GREEN_BORDER)
         button.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
         return button
     }()
     
     let cancelButton: UIButton = {
-        let button = UIButton(title: "Cancel", borderColor: AppColors.RED_BORDER)
+        let button = UIButton(title: "Cancel".localized, borderColor: AppColors.RED_BORDER)
         button.addTarget(self, action: #selector(handleSignup), for: .touchUpInside)
         return button
     }()

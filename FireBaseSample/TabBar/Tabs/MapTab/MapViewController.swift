@@ -21,7 +21,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        setupNavigationBar(title: "Map")
+        setupNavigationBar(title: "Map".localized)
         setupMapView()
         
 

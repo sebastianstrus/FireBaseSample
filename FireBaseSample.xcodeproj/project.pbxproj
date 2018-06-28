@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		18E18BB7AFF5E543A8CFA652 /* Pods_FireBaseSample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4777843B5FEB559CD1D6CAA1 /* Pods_FireBaseSample.framework */; };
+		7D24FC1620E459270018C56D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D24FC1820E459270018C56D /* Localizable.strings */; };
 		7D30A3DA20DF071400F34A94 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D30A3D920DF071400F34A94 /* Data.swift */; };
 		7D3B655F20C4805100189C2D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D3B655E20C4805100189C2D /* AppDelegate.swift */; };
 		7D3B656620C4805100189C2D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D3B656520C4805100189C2D /* Assets.xcassets */; };
@@ -52,6 +53,8 @@
 /* Begin PBXFileReference section */
 		304D64DBB810B0B579AED268 /* Pods-FireBaseSample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FireBaseSample.release.xcconfig"; path = "Pods/Target Support Files/Pods-FireBaseSample/Pods-FireBaseSample.release.xcconfig"; sourceTree = "<group>"; };
 		4777843B5FEB559CD1D6CAA1 /* Pods_FireBaseSample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FireBaseSample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D24FC1720E459270018C56D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		7D24FC1920E459500018C56D /* sv */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = sv; path = sv.lproj/Localizable.strings; sourceTree = "<group>"; };
 		7D30A3D920DF071400F34A94 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		7D3B655B20C4805100189C2D /* FireBaseSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FireBaseSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D3B655E20C4805100189C2D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -120,6 +123,8 @@
 		601CDD9B9F17935F4929954B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7DE2483920E3FA56008E7A49 /* HoshiTextField.swift */,
+				7DE2483B20E3FA88008E7A49 /* TextFieldEffects.swift */,
 				4777843B5FEB559CD1D6CAA1 /* Pods_FireBaseSample.framework */,
 			);
 			name = Frameworks;
@@ -128,8 +133,8 @@
 		7D3B655220C4805100189C2D = {
 			isa = PBXGroup;
 			children = (
+				7D24FC1820E459270018C56D /* Localizable.strings */,
 				7D3B655D20C4805100189C2D /* FireBaseSample */,
-				7DE2483D20E40D9E008E7A49 /* Frameworks */,
 				7D3B655C20C4805100189C2D /* Products */,
 				2937132E62243CB964F1C0AA /* Pods */,
 				601CDD9B9F17935F4929954B /* Frameworks */,
@@ -338,15 +343,6 @@
 			path = WelcomeScreen;
 			sourceTree = "<group>";
 		};
-		7DE2483D20E40D9E008E7A49 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7DE2483920E3FA56008E7A49 /* HoshiTextField.swift */,
-				7DE2483B20E3FA88008E7A49 /* TextFieldEffects.swift */,
-			);
-			path = Frameworks;
-			sourceTree = "<group>";
-		};
 		7DEDFA9D20D7AAE500A3C418 /* Tabs */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +430,7 @@
 			knownRegions = (
 				en,
 				Base,
+				sv,
 			);
 			mainGroup = 7D3B655220C4805100189C2D;
 			productRefGroup = 7D3B655C20C4805100189C2D /* Products */;
@@ -453,6 +450,7 @@
 				7D6C158820D31D62008F919F /* foody_background.mov in Resources */,
 				7D62BEBE20D6EC8C00EAA6E8 /* SeymourOne-Regular.ttf in Resources */,
 				7D3B656920C4805100189C2D /* LaunchScreen.storyboard in Resources */,
+				7D24FC1620E459270018C56D /* Localizable.strings in Resources */,
 				7D62BEBA20D6E75200EAA6E8 /* Oswald-Medium.ttf in Resources */,
 				7D3B656620C4805100189C2D /* Assets.xcassets in Resources */,
 				7D62BEBB20D6E75500EAA6E8 /* LuckiestGuy-Regular.ttf in Resources */,
@@ -552,6 +550,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		7D24FC1820E459270018C56D /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D24FC1720E459270018C56D /* en */,
+				7D24FC1920E459500018C56D /* sv */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		7D3B656720C4805100189C2D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -567,6 +574,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -627,6 +635,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -683,7 +692,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2MN47LCN82;
+				DEVELOPMENT_TEAM = 4SL936GBZY;
 				INFOPLIST_FILE = FireBaseSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -702,7 +711,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = 2MN47LCN82;
+				DEVELOPMENT_TEAM = 4SL936GBZY;
 				INFOPLIST_FILE = FireBaseSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -20,13 +20,13 @@ class AccountView: UIView {
     }()
     
     let cameraButton: UIButton = {
-        let button = UIButton(title: "Camera", color: AppColors.DODGER_BLUE)
+        let button = UIButton(title: "Camera".localized, color: AppColors.DODGER_BLUE)
         button.addTarget(self, action: #selector(handleCamera), for: .touchUpInside)
         return button
     }()
     
     let libraryButton: UIButton = {
-        let button = UIButton(title: "Library", color: AppColors.DODGER_BLUE)
+        let button = UIButton(title: "Library".localized, color: AppColors.DODGER_BLUE)
         button.addTarget(self, action: #selector(handleLibrary), for: .touchUpInside)
         return button
     }()
@@ -54,18 +54,18 @@ class AccountView: UIView {
     
     let registrationDateLabel: UILabel = {
         let label = UILabel()
-        label.text = "Registration date: "
+        label.text = "Registration date: ".localized
         return label
     }()
     
     // buttons to buttonsContainer
     let logoutButton: UIButton = {
-        let button = UIButton(title: "Log out", color: AppColors.DODGER_BLUE)
+        let button = UIButton(title: "Log out".localized, color: AppColors.DODGER_BLUE)
         return button
     }()
     
     let removeAccountButton: UIButton = {
-        let button = UIButton(title: "Remove account", color: AppColors.RED_BORDER)
+        let button = UIButton(title: "Remove account".localized, color: AppColors.RED_BORDER)
         return button
     }()
 
